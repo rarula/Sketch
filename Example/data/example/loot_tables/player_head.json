@@ -1,0 +1,107 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:player_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:fill_player_head",
+                            "entity": "this"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "italic": false,
+                                    "color": "yellow",
+                                    "selector": "@s"
+                                },
+                                {
+                                    "text": " のステータス"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                [
+                                    {
+                                        "italic": false,
+                                        "color": "gold",
+                                        "text": "Rank : "
+                                    },
+                                    {
+                                        "color": "white",
+                                        "text": "1 [ "
+                                    },
+                                    {
+                                        "color": "aqua",
+                                        "text": "C- "
+                                    },
+                                    {
+                                        "color": "white",
+                                        "text": "]"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "italic": false,
+                                        "color": "gold",
+                                        "text": "Lv : "
+                                    },
+                                    {
+                                        "color": "white",
+                                        "text": "1"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "italic": false,
+                                        "color": "aqua",
+                                        "text": "Kill(s) : "
+                                    },
+                                    {
+                                        "color": "white",
+                                        "text": "0"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "italic": false,
+                                        "color": "aqua",
+                                        "text": "Paint(s) : "
+                                    },
+                                    {
+                                        "color": "white",
+                                        "text": "0"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "italic": false,
+                                        "color": "green",
+                                        "text": "Money : "
+                                    },
+                                    {
+                                        "color": "white",
+                                        "text": "0"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{InventoryGui:{id:{gui:\"MAIN\", sound:\"BUTTON\"}}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
