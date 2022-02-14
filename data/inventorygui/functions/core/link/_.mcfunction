@@ -1,8 +1,5 @@
-#> inventorygui:connect
-#
-# インタラクト先のエンティティにタグを設定します
-#
-# @api
+#> inventorygui:core/link/_
+# @within function inventorygui:api/link
 
 #>
 # @private

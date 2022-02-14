@@ -3,7 +3,7 @@
 
 # idを設定
     ## 接続
-        function inventorygui:connect
+        function inventorygui:api/link
 
     ## OhMyDat
         execute as @e[type=minecraft:chest_minecart, tag=InvGui.ConnectingAt, limit=1] run function #oh_my_dat:please
@@ -13,7 +13,7 @@
         data modify storage inventorygui: id set from storage inventorygui:core/action/drop _.DroppedItemData.Item.tag.InventoryGui.id
 
     ## 切断
-        function inventorygui:disconnect
+        function inventorygui:api/unlink
 
 # コールバック
     function #inventorygui:callback

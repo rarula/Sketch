@@ -1,4 +1,4 @@
-#> inventorygui:core/load_once
+#> inventorygui:core/init
 # @within function inventorygui:core/load
 
 #>
@@ -9,9 +9,7 @@
 
 #> 定数
 # @within inventorygui:**
-    #declare score_holder $2
-    #declare score_holder $32768
-    #declare score_holder $65536
+#declare score_holder $65536
 
 #> タグ
 # @within inventorygui:**
@@ -55,12 +53,12 @@
     scoreboard objectives add InventoryGuiId dummy
     scoreboard objectives add InventoryGui dummy
 
-# ワールド依存設定
-    execute in minecraft:overworld run forceload add 0 0 1 1
-    execute in minecraft:overworld run setblock 1 1 1 minecraft:chest{Lock:"InventoryGui"}
-
 # スコアを設定
     scoreboard players set $65536 InventoryGui 65536
+
+# ワールド依存設定
+    execute in minecraft:overworld run forceload add 1 1
+    execute in minecraft:overworld run setblock 1 1 1 minecraft:orange_shulker_box{Lock:"InventoryGui"}
 
 # 初期化済みとして設定
     data modify storage inventorygui: Initialized set value true
