@@ -1,5 +1,5 @@
 {
     "values": [
-        "inventorygui:core/load"
+        "inventory_gui:core/load"
     ]
 }

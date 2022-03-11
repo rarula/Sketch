@@ -1,0 +1,361 @@
+{
+    "criteria": {
+        "0-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.0-0\"]}"
+                }
+            }
+        },
+        "0-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.0-1\"]}"
+                }
+            }
+        },
+        "1-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.1-0\"]}"
+                }
+            }
+        },
+        "1-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.1-1\"]}"
+                }
+            }
+        },
+        "2-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.2-0\"]}"
+                }
+            }
+        },
+        "2-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.2-1\"]}"
+                }
+            }
+        },
+        "3-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.3-0\"]}"
+                }
+            }
+        },
+        "3-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.3-1\"]}"
+                }
+            }
+        },
+        "4-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.4-0\"]}"
+                }
+            }
+        },
+        "4-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.4-1\"]}"
+                }
+            }
+        },
+        "5-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.5-0\"]}"
+                }
+            }
+        },
+        "5-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.5-1\"]}"
+                }
+            }
+        },
+        "6-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.6-0\"]}"
+                }
+            }
+        },
+        "6-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.6-1\"]}"
+                }
+            }
+        },
+        "7-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.7-0\"]}"
+                }
+            }
+        },
+        "7-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.7-1\"]}"
+                }
+            }
+        },
+        "8-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.8-0\"]}"
+                }
+            }
+        },
+        "8-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.8-1\"]}"
+                }
+            }
+        },
+        "9-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.9-0\"]}"
+                }
+            }
+        },
+        "9-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.9-1\"]}"
+                }
+            }
+        },
+        "10-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.10-0\"]}"
+                }
+            }
+        },
+        "10-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.10-1\"]}"
+                }
+            }
+        },
+        "11-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.11-0\"]}"
+                }
+            }
+        },
+        "11-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.11-1\"]}"
+                }
+            }
+        },
+        "12-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.12-0\"]}"
+                }
+            }
+        },
+        "12-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.12-1\"]}"
+                }
+            }
+        },
+        "13-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.13-0\"]}"
+                }
+            }
+        },
+        "13-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.13-1\"]}"
+                }
+            }
+        },
+        "14-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.14-0\"]}"
+                }
+            }
+        },
+        "14-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.14-1\"]}"
+                }
+            }
+        },
+        "15-0": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.15-0\"]}"
+                }
+            }
+        },
+        "15-1": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:chest_minecart",
+                    "nbt": "{Tags:[\"InvGui.Filter.15-1\"]}"
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "0-0",
+            "0-1"
+        ],
+        [
+            "1-0",
+            "1-1"
+        ],
+        [
+            "2-0",
+            "2-1"
+        ],
+        [
+            "3-0",
+            "3-1"
+        ],
+        [
+            "4-0",
+            "4-1"
+        ],
+        [
+            "5-0",
+            "5-1"
+        ],
+        [
+            "6-0",
+            "6-1"
+        ],
+        [
+            "7-0",
+            "7-1"
+        ],
+        [
+            "8-0",
+            "8-1"
+        ],
+        [
+            "9-0",
+            "9-1"
+        ],
+        [
+            "10-0",
+            "10-1"
+        ],
+        [
+            "11-0",
+            "11-1"
+        ],
+        [
+            "12-0",
+            "12-1"
+        ],
+        [
+            "13-0",
+            "13-1"
+        ],
+        [
+            "14-0",
+            "14-1"
+        ],
+        [
+            "15-0",
+            "15-1"
+        ]
+    ],
+    "rewards": {
+        "function": "inventory_gui:core/action/interact/_"
+    }
+}

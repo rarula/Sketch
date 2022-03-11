@@ -9,24 +9,24 @@
 
 ## 使い方
 ### Guiを設定
-> **1.** 座標 1 1 1 に存在するシュルカーボックス内に、Guiに配置されるアイテムを設定します
+> **1.** 座標 10000 -64 10000 に存在するシュルカーボックス内に、Guiに配置されるアイテムを設定します
 > ```mcfunction
-> item replace block 1 1 1 container.13 with minecraft:diamond
+> item replace block 10000 -64 10000 container.13 with minecraft:diamond
 > ```
 
 > **2.** クリック時になんらかの動作をさせたいアイテムにはidを設定します
 > ```mcfunction
-> item replace block 1 1 1 container.13 with minecraft:diamond{InventoryGui:{id:"diamond"}}
+> item replace block 10000 -64 10000 container.13 with minecraft:diamond{InventoryGui:{id:"diamond"}}
 > ```
 
-> **3.** `function inventorygui:api/create` を実行し、Guiを作成します
+> **3.** `function inventory_gui:api/create` を実行し、Guiを作成します
 > ```mcfunction
-> item replace block 1 1 1 container.13 with minecraft:diamond{InventoryGui:{id:"diamond"}}
-> function inventorygui:api/create
+> item replace block 10000 -64 10000 container.13 with minecraft:diamond{InventoryGui:{id:"diamond"}}
+> function inventory_gui:api/create
 > ```
 
 ### クリック時の動作を設定
-> **1.** `#inventorygui:callback` に、クリック時に呼び出されるファイルを追加します
+> **1.** `#inventory_gui:callback` に、クリック時に呼び出されるファイルを追加します
 > ```json
 > {
 >     "values": [
@@ -36,12 +36,12 @@
 > ```
 
 > **2.** クリック時に呼び出されるファイル内でidを確認し、それぞれの動作を設定します  
-> （`inventorygui: id` にはクリックされたアイテムのidが入っています）
+> （`inventory_gui: id` にはクリックされたアイテムのidが入っています）
 >
 > ```mcfunction
 > #> example:gui/diamond/check
 >
-> execute if data storage inventorygui: {id:"diamond"} run ...
+> execute if data storage inventory_gui: {id:"diamond"} run ...
 > ```
 
 ## 既知のバグ

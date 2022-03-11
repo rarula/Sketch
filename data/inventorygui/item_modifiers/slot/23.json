@@ -1,4 +1,0 @@
-{
-    "function": "minecraft:set_nbt",
-    "tag": "{InventoryGui:{Button:true, Slot:23b, SlotFinder:{0:false, 1:false, 2:true, 3:false, 4:false}}}"
-}
