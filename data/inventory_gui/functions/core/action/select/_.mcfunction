@@ -48,17 +48,14 @@
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.LastInventory[{Slot:25b}] unless data storage inventory_gui:temp CurrentInventory[{Slot:25b}].tag.InventoryGui.Button run function inventory_gui:core/action/select/slot/25
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.LastInventory[{Slot:26b}] unless data storage inventory_gui:temp CurrentInventory[{Slot:26b}].tag.InventoryGui.Button run function inventory_gui:core/action/select/slot/26
 
-# 別のアイテムが入っていれば返還
-    execute if data storage inventory_gui:temp ShulkerItems run function inventory_gui:core/action/select/slot/return
-
-
-## 後処理
 # idを設定
-    data modify storage inventory_gui: id set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.id
+    data modify storage inventory_gui: out.id set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.id
 
 # コールバック
     function #inventory_gui:callback
 
+
+## 後処理
 # リセット
-    data remove storage inventory_gui: id
+    data remove storage inventory_gui: out
     data remove storage inventory_gui:temp CurrentInventory

@@ -17,7 +17,7 @@
     function #inventory_gui:interact
 
 # idを設定
-    data modify storage inventory_gui: id set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.id
+    data modify storage inventory_gui: out.id set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.id
 
 # コールバック
     function #inventory_gui:callback
@@ -25,4 +25,4 @@
 
 ## 後処理
 # リセット
-    data remove storage inventory_gui: id
+    data remove storage inventory_gui: out

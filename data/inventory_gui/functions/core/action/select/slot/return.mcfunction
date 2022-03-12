@@ -7,7 +7,7 @@
 
 # アイテムをシュルカーボックスに移動
     item replace block 10000 -64 10000 container.0 with minecraft:debug_stick
-    data modify block 10000 -64 10000 Items[0] set from storage inventory_gui:temp ShulkerItems
+    data modify block 10000 -64 10000 Items[0] set from storage inventory_gui: out.item
 
 # インベントリサイズを取得 (防具・オフハンドスロットを除く)
     data modify storage inventory_gui:temp Inventory set from entity @s Inventory
@@ -25,4 +25,4 @@
 # リセット
     scoreboard players reset $InventorySize InventoryGui
     data remove storage inventory_gui:temp Inventory
-    data remove storage inventory_gui:temp ShulkerItems
+    data remove storage inventory_gui: out.item

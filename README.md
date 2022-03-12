@@ -36,12 +36,12 @@
 > ```
 
 > **2.** クリック時に呼び出されるファイル内でidを確認し、それぞれの動作を設定します  
-> （`inventory_gui: id` にはクリックされたアイテムのidが入っています）
+> （`inventory_gui: out.id` にはクリックされたアイテムのidが入っています）
 >
 > ```mcfunction
 > #> example:gui/diamond/check
 >
-> execute if data storage inventory_gui: {id:"diamond"} run ...
+> execute if data storage inventory_gui: out{id:"diamond"} run ...
 > ```
 
 ## 既知のバグ

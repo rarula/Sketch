@@ -15,7 +15,7 @@
 ## メイン処理
 # idを設定
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.id set from storage inventory_gui:temp ItemData.Item.tag.InventoryGui.id
-    data modify storage inventory_gui: id set from storage inventory_gui:temp ItemData.Item.tag.InventoryGui.id
+    data modify storage inventory_gui: out.id set from storage inventory_gui:temp ItemData.Item.tag.InventoryGui.id
 
 # コールバック
     function #inventory_gui:callback
@@ -23,7 +23,7 @@
 
 ## 後処理
 # リセット
-    data remove storage inventory_gui: id
+    data remove storage inventory_gui: out
 
 # ドロップした回数を減らす
     scoreboard players remove @s InventoryGuiDrop 1
