@@ -2,4 +2,4 @@
 # @within function inventory_gui:api/unlink
 
 # 紐付けを解除
-    tag @e[type=minecraft:chest_minecart, tag=InvGui.ConnectingAt] remove InvGui.ConnectingAt
+    tag @e[type=minecraft:chest_minecart, tag=InvGui.LinkingEntity] remove InvGui.LinkingEntity

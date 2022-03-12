@@ -5,7 +5,7 @@
 # @public
     #alias vector InventoryGui 10000 -64 10000
     #declare storage inventory_gui:
-    #declare tag InvGui.ConnectingAt
+    #declare tag InvGui.LinkingEntity
 
 #>
 # @within inventory_gui:**

@@ -9,10 +9,10 @@
     function inventory_gui:api/link
 
 # 選択前のインベントリを取得 (OhMyDat)
-    execute as @e[type=minecraft:chest_minecart, tag=InvGui.ConnectingAt, limit=1] run function #oh_my_dat:please
+    execute as @e[type=minecraft:chest_minecart, tag=InvGui.LinkingEntity, limit=1] run function #oh_my_dat:please
 
 # 選択後のインベントリを取得
-    data modify storage inventory_gui:temp CurrentInventory set from entity @e[type=minecraft:chest_minecart, tag=InvGui.ConnectingAt, limit=1] Items
+    data modify storage inventory_gui:temp CurrentInventory set from entity @e[type=minecraft:chest_minecart, tag=InvGui.LinkingEntity, limit=1] Items
 
 # 紐付けを解除
     function inventory_gui:api/unlink

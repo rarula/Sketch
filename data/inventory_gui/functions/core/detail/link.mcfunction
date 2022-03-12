@@ -7,5 +7,5 @@
 
 # エンティティと紐付け
     tag @s add InvGui.Link.this
-    execute as @e[type=minecraft:chest_minecart, tag=InvGui.RegisteredEntity] if score @s InventoryGuiId = @a[tag=InvGui.Link.this, limit=1] InventoryGuiId run tag @s add InvGui.ConnectingAt
+    execute as @e[type=minecraft:chest_minecart, tag=InvGui.RegisteredEntity] if score @s InventoryGuiId = @a[tag=InvGui.Link.this, limit=1] InventoryGuiId run tag @s add InvGui.LinkingEntity
     tag @s remove InvGui.Link.this
