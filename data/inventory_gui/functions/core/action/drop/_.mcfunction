@@ -5,10 +5,8 @@
 # @private
 #declare tag InvGui.Drop.this
 
-# タグを設定
-    tag @s add InvGui.Drop.this
-
 # アイテムをドロップしたプレイヤーを探索
+    tag @s add InvGui.Drop.this
     execute at @s as @a[scores={InventoryGuiDrop=1..}, sort=nearest] at @s anchored eyes if entity @e[type=minecraft:item, tag=InvGui.Drop.this, distance=..1.5] run function inventory_gui:core/action/drop/player/check_condition
 
 # リセット
