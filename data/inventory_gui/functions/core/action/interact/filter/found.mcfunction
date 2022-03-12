@@ -4,5 +4,8 @@
 # スコアを設定
     scoreboard players operation @a[tag=InvGui.Filter.this, limit=1] InventoryGuiId = @s InventoryGuiId
 
-# idを取得 (OhMyDat)
-    function #oh_my_dat:please
+# OhMyDatが未設定であれば設定
+    execute unless score @s OhMyDatID matches -2147483648..2147483647 run function #oh_my_dat:please
+
+# OhMyDatIDを取得
+    scoreboard players operation $OhMyDatID InventoryGui = @s OhMyDatID
