@@ -6,7 +6,7 @@
     function inventory_gui:api/link
 
 # idを取得 (OhMyDat)
-    execute as @e[type=minecraft:chest_minecart, tag=InvGui.LinkingEntity, limit=1] run function #oh_my_dat:please
+    execute as @e[type=minecraft:chest_minecart, tag=InvGui.LinkingEntity] run function #oh_my_dat:please
 
 # 紐付けを解除
     function inventory_gui:api/unlink
