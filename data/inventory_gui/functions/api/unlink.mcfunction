@@ -1,6 +1,6 @@
 #> inventory_gui:api/unlink
 #
-# inventory_gui:api/link によって設定されたタグを削除します
+# 最後にインタラクトしたInventoryGuiエンティティとの紐付けを解除します
 #
 # @api
 

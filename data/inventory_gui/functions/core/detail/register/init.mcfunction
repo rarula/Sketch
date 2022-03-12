@@ -6,10 +6,7 @@
     #declare score_holder $Index
     #declare score_holder $TempIndex
 
-# タグを設定
-    tag @s add InvGui.RegisteredEntity
-
-# タグを設定 (インタラクト先指定用)
+# タグを設定 (インタラクト先探索用)
     scoreboard players add $Index InventoryGui 1
     execute if score $Index InventoryGui matches 32768 run scoreboard players set $Index InventoryGui 1
     scoreboard players operation $TempIndex InventoryGui = $Index InventoryGui
@@ -80,3 +77,6 @@
     scoreboard players reset $TempIndex InventoryGui
 
     scoreboard players operation @s InventoryGuiId = $Index InventoryGui
+
+# 登録済みとして設定
+    tag @s add InvGui.RegisteredEntity

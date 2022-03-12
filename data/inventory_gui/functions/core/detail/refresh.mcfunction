@@ -7,5 +7,5 @@
 # インベントリを初期化
     loot replace entity @e[type=minecraft:chest_minecart, tag=InvGui.ConnectingAt, limit=1] container.0 255 loot inventory_gui:air
 
-# 紐付けをリセット
+# 紐付けを解除
     function inventory_gui:api/unlink

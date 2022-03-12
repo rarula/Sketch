@@ -1,6 +1,7 @@
 #> inventory_gui:api/link
 #
-# 最後にインタラクトしたエンティティにタグを設定します
+# 最後にインタラクトしたInventoryGuiエンティティと紐付けます
+# 紐付けられたエンティティには InvGui.ConnectingAt タグが設定されます
 #
 # @api
 

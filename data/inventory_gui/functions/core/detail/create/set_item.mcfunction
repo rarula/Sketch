@@ -1,7 +1,7 @@
 #> inventory_gui:core/detail/create/set_item
 #
 # @input
-#   10000 -64 10000 container.0~26 Gui作成時に配置されるアイテム
+#   10000 -64 10000 container.0~26
 #
 # @within function inventory_gui:core/detail/create/_
 
@@ -9,7 +9,7 @@
     function #oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.LastInventory set from block 10000 -64 10000 Items
 
-# アイテムを設定
+# アイテムを配置
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.LastInventory[{Slot: 0b}] run item replace entity @s container.0 from block 10000 -64 10000 container.0 inventory_gui:button
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.LastInventory[{Slot: 1b}] run item replace entity @s container.1 from block 10000 -64 10000 container.1 inventory_gui:button
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.LastInventory[{Slot: 2b}] run item replace entity @s container.2 from block 10000 -64 10000 container.2 inventory_gui:button
@@ -38,5 +38,5 @@
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.LastInventory[{Slot:25b}] run item replace entity @s container.25 from block 10000 -64 10000 container.25 inventory_gui:button
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.LastInventory[{Slot:26b}] run item replace entity @s container.26 from block 10000 -64 10000 container.26 inventory_gui:button
 
-# 初期化
+# インベントリを初期化
     loot replace block 10000 -64 10000 container.0 27 loot inventory_gui:air

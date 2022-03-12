@@ -1,6 +1,6 @@
 #> inventory_gui:api/register
 #
-# InventoryGuiに登録します
+# 実行者をInventoryGuiに登録します
 #
 # @api
 

@@ -4,5 +4,5 @@
 #
 # @within tag/function minecraft:load
 
-# 初回ロード時ではデータパックを初期化
+# データパックを初期化
     execute unless data storage inventory_gui: Initialized run function inventory_gui:core/init

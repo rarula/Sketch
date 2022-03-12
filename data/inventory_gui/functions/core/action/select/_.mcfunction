@@ -14,7 +14,7 @@
 # 選択後のインベントリを取得
     data modify storage inventory_gui:temp CurrentInventory set from entity @e[type=minecraft:chest_minecart, tag=InvGui.ConnectingAt, limit=1] Items
 
-# 紐付けをリセット
+# 紐付けを解除
     function inventory_gui:api/unlink
 
 

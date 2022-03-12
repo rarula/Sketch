@@ -1,7 +1,7 @@
 #> inventory_gui:core/detail/create/_
 #
 # @input
-#   10000 -64 10000 container.0~26 Gui作成時に配置されるアイテム
+#   10000 -64 10000 container.0~26
 #
 # @within function inventory_gui:api/create
 
@@ -11,5 +11,5 @@
 # アイテムを配置
     execute as @e[type=minecraft:chest_minecart, tag=InvGui.ConnectingAt, limit=1] run function inventory_gui:core/detail/create/set_item
 
-# 紐付けをリセット
+# 紐付けを解除
     function inventory_gui:api/unlink

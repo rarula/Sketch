@@ -8,7 +8,7 @@
 # idを取得 (OhMyDat)
     execute as @e[type=minecraft:chest_minecart, tag=InvGui.ConnectingAt, limit=1] run function #oh_my_dat:please
 
-# 紐付けをリセット
+# 紐付けを解除
     function inventory_gui:api/unlink
 
 

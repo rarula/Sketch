@@ -1,11 +1,11 @@
 #> inventory_gui:core/detail/fill
 #
 # @input
-#   10000 -64 10000 container.0 全スロットに配置するアイテム
+#   10000 -64 10000 container.0
 #
 # @within function inventory_gui:api/fill
 
-# アイテムを設定
+# アイテムを配置
     item replace block 10000 -64 10000 container.0 from block 10000 -64 10000 container.0
     item replace block 10000 -64 10000 container.1 from block 10000 -64 10000 container.0
     item replace block 10000 -64 10000 container.2 from block 10000 -64 10000 container.0
