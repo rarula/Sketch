@@ -8,4 +8,4 @@
     execute unless score @s OhMyDatID matches -2147483648..2147483647 run function #oh_my_dat:please
 
 # OhMyDatIDを取得
-    scoreboard players operation $OhMyDatID InventoryGui = @s OhMyDatID
+    execute store result storage inventory_gui:temp OhMyDatID int 1.0 run scoreboard players get @s OhMyDatID

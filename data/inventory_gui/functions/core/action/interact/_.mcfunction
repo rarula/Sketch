@@ -5,10 +5,6 @@
 # @within advancement inventory_gui:interact
 
 #>
-# @within inventory_gui:core/action/interact/**
-#declare score_holder $OhMyDatID
-
-#>
 # @private
 #declare score_holder _
 
@@ -26,7 +22,7 @@
     function #inventory_gui:interact
 
 # idを設定 (OhMyDat)
-    scoreboard players operation _ OhMyDatID = $OhMyDatID InventoryGui
+    execute store result score _ OhMyDatID run data get storage inventory_gui:temp OhMyDatID
     function #oh_its_dat:please
     data modify storage inventory_gui: out.id set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].InventoryGui.id
 
@@ -37,4 +33,4 @@
 ## 後処理
 # リセット
     data remove storage inventory_gui: out
-    scoreboard players reset $OhMyDatID InventoryGui
+    data remove storage inventory_gui:temp OhMyDatID
