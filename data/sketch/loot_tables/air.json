@@ -1,17 +1,17 @@
 {
-	"type": "minecraft:empty",
-	"pools": [
-		{
-			"rolls": {
-				"type": "minecraft:constant",
-				"value": 1
-			},
-			"entries": [
-				{
-					"type": "minecraft:item",
-					"name": "minecraft:air"
-				}
-			]
-		}
-	]
+    "type": "minecraft:empty",
+    "pools": [
+        {
+            "rolls": {
+                "type": "minecraft:constant",
+                "value": 1
+            },
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:air"
+                }
+            ]
+        }
+    ]
 }
