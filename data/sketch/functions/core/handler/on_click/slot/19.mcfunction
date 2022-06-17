@@ -5,4 +5,4 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.id set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.LastInventory[{Slot:19b}].tag.Sketch.id
 
 # 別のアイテムが入っていればデータを設定
-    execute if data storage sketch:temp CurrentInventory[{Slot:19b}] run data modify storage sketch: out.item set from storage sketch:temp CurrentInventory[{Slot:19b}]
+    execute if data storage sketch:temp NowInventory[{Slot:19b}] run data modify storage sketch: out.item set from storage sketch:temp NowInventory[{Slot:19b}]
