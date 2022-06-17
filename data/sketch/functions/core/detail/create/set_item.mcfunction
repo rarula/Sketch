@@ -1,7 +1,7 @@
 #> sketch:core/detail/create/set_item
 #
 # @input
-#   10000 -64 10000 container.0~26
+#   vector 10000 -64 10000 container.0~26
 #
 # @within function sketch:core/detail/create/_
 

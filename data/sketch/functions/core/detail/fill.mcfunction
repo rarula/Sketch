@@ -1,7 +1,7 @@
 #> sketch:core/detail/fill
 #
 # @input
-#   10000 -64 10000 container.0
+#   vector 10000 -64 10000 container.0
 #
 # @within function sketch:api/fill
 
