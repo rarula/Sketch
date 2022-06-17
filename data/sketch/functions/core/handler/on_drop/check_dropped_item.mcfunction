@@ -4,7 +4,7 @@
 #
 # @within function sketch:core/tick
 
-# Sketchのアイテムであるか確認
+# Sketchのアイテムであればドロップ処理
     data modify storage sketch:temp ItemData set from entity @s
     execute if data storage sketch:temp ItemData.Item.tag.Sketch{Button:true} run function sketch:core/handler/on_drop/_
 

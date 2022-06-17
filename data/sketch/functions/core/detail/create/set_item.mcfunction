@@ -5,7 +5,7 @@
 #
 # @within function sketch:core/detail/create/_
 
-# 設定されるインベントリを取得 (OhMyDat)
+# 最後に設定されたインベントリとして保存 (OhMyDat)
     function #oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.LastInventory set from block 10000 -64 10000 Items
 

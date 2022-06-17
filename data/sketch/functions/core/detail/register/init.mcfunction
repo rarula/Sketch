@@ -6,7 +6,7 @@
     #declare score_holder $Index
     #declare score_holder $TempIndex
 
-# タグを設定 (インタラクト先探索用)
+# インタラクト先探索用にIdを割り当て
     scoreboard players add $Index Sketch 1
     execute if score $Index Sketch matches 32768 run scoreboard players set $Index Sketch 1
     scoreboard players operation $TempIndex Sketch = $Index Sketch
