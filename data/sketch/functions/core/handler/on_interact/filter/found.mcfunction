@@ -4,7 +4,7 @@
 #
 # @within function sketch:core/handler/on_interact/filter/0
 
-# 自身のIdをインタラクトしてきたプレイヤーに割り当てる
+# インタラクトしてきたプレイヤーに自身のIdを割り当てる
     scoreboard players operation @a[tag=Sketch.onInteract.this] SketchId = @s SketchId
 
 # OhMyDatが未設定であれば設定
