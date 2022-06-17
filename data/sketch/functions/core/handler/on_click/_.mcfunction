@@ -58,4 +58,5 @@ function sketch:api/unlink
 ## 後処理
 # リセット
     data remove storage sketch: out
+    data remove storage sketch:temp LastInv
     data remove storage sketch:temp NewInv
