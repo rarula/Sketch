@@ -9,7 +9,7 @@
     function sketch:api/link
 
 # idを取得 (OhMyDat)
-    execute as @e[type=minecraft:chest_minecart, tag=Sketch.LinkingEntity] run function #oh_my_dat:please
+    execute as @e[type=minecraft:chest_minecart, tag=SketchTarget] run function #oh_my_dat:please
 
 # 紐付けを解除
     function sketch:api/unlink

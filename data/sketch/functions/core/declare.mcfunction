@@ -5,12 +5,13 @@
 # @public
     #alias vector Sketch 10000 -64 10000
     #declare storage sketch:
-    #declare tag Sketch.LinkingEntity
-    #declare tag Sketch.RegisteredEntity
+    #declare tag SketchEntity
+    #declare tag SketchTarget
 
 #>
 # @within sketch:**
     #declare storage sketch:temp
+    #declare score_holder $65536
     #declare tag Sketch.Filter.0-0
     #declare tag Sketch.Filter.0-1
     #declare tag Sketch.Filter.1-0
@@ -43,4 +44,3 @@
     #declare tag Sketch.Filter.14-1
     #declare tag Sketch.Filter.15-0
     #declare tag Sketch.Filter.15-1
-    #declare score_holder $65536

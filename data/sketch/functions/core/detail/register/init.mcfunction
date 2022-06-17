@@ -79,4 +79,4 @@
     scoreboard players operation @s SketchId = $Index Sketch
 
 # 登録済みとして設定
-    tag @s add Sketch.RegisteredEntity
+    tag @s add SketchEntity

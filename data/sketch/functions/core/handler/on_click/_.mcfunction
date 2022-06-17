@@ -9,10 +9,10 @@
     function sketch:api/link
 
 # クリック前のインベントリを取得 (OhMyDat)
-    execute as @e[type=minecraft:chest_minecart, tag=Sketch.LinkingEntity] run function #oh_my_dat:please
+    execute as @e[type=minecraft:chest_minecart, tag=SketchTarget] run function #oh_my_dat:please
 
 # クリック後のインベントリを取得
-    data modify storage sketch:temp CurrentInventory set from entity @e[type=minecraft:chest_minecart, tag=Sketch.LinkingEntity, limit=1] Items
+    data modify storage sketch:temp CurrentInventory set from entity @e[type=minecraft:chest_minecart, tag=SketchTarget, limit=1] Items
 
 # 紐付けを解除
     function sketch:api/unlink

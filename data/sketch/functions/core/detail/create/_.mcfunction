@@ -9,7 +9,7 @@
     function sketch:api/link
 
 # アイテムを配置
-    execute as @e[type=minecraft:chest_minecart, tag=Sketch.LinkingEntity] run function sketch:core/detail/create/set_item
+    execute as @e[type=minecraft:chest_minecart, tag=SketchTarget] run function sketch:core/detail/create/set_item
 
 # 紐付けを解除
     function sketch:api/unlink
