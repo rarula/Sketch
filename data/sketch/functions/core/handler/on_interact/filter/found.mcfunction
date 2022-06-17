@@ -4,8 +4,8 @@
 #
 # @within function sketch:core/handler/on_interact/filter/0
 
-# スコアを設定
-    scoreboard players operation @a[tag=Sketch.Filter.this] SketchId = @s SketchId
+# 自身のIdをインタラクトしてきたプレイヤーに割り当てる
+    scoreboard players operation @a[tag=Sketch.onInteract.this] SketchId = @s SketchId
 
 # OhMyDatが未設定であれば設定
     execute unless score @s OhMyDatID matches -2147483648..2147483647 run function #oh_my_dat:please

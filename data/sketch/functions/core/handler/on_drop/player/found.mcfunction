@@ -25,8 +25,8 @@
 
 
 ## 後処理
-# リセット
-    data remove storage sketch: out
-
 # ドロップした回数を減らす
     scoreboard players remove @s SketchDrop 1
+
+# リセット
+    data remove storage sketch: out

@@ -4,5 +4,5 @@
 #
 # @within tag/function close_detector:on_closed
 
-# Sketchに登録済みのコンテナであればコールバック
+# Sketchに登録済みのチェスト付きトロッコであればコールバック
     execute if predicate open:chest_minecart run function #sketch:on_close
