@@ -5,19 +5,18 @@
 # @within function sketch:core/handler/on_drop/player/check_uuid
 
 ## 前処理
-# 紐付け
-    function sketch:api/link
+function sketch:api/link
 
-# idを取得 (OhMyDat)
-    execute as @e[type=minecraft:chest_minecart, tag=SketchTarget] run function #oh_my_dat:please
+execute as @e[type=minecraft:chest_minecart, tag=SketchTarget] run function #oh_my_dat:please
 
-# 紐付けを解除
-    function sketch:api/unlink
+function sketch:api/unlink
 
 
 ## メイン処理
-# idを設定
+# idを最新のデータに更新
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.id set from storage sketch:temp ItemData.Item.tag.Sketch.id
+
+# コールバック時に渡すデータを設定
     data modify storage sketch: out.id set from storage sketch:temp ItemData.Item.tag.Sketch.id
 
 # コールバック
@@ -25,8 +24,6 @@
 
 
 ## 後処理
-# ドロップした回数を減らす
-    scoreboard players remove @s SketchDrop 1
-
 # リセット
+    scoreboard players remove @s SketchDrop 1
     data remove storage sketch: out

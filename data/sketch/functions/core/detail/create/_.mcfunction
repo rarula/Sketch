@@ -1,15 +1,17 @@
 #> sketch:core/detail/create/_
 #
 # @input
-#   vector 10000 -64 10000 container.0~26
+#   vector 10000 -64 10000
+#       container.0~26
 #
 # @within function sketch:api/create
 
-# 紐付け
-    function sketch:api/link
+function sketch:api/link
 
-# アイテムを配置
-    execute as @e[type=minecraft:chest_minecart, tag=SketchTarget] run function sketch:core/detail/create/set_item
+# インベントリに指定されたアイテムを配置
+    execute as @e[type=minecraft:chest_minecart, tag=SketchTarget] run function sketch:core/detail/create/set_inventory
 
-# 紐付けを解除
-    function sketch:api/unlink
+function sketch:api/unlink
+
+# インベントリを初期化
+    loot replace block 10000 -64 10000 container.0 27 loot sketch:air
