@@ -1,4 +1,4 @@
-#> sketch:core/common/callback
+#> sketch:core/common/select
 #
 # 汎用コールバック処理
 #
@@ -15,10 +15,10 @@ function sketch:api/link
 
 execute as @e[type=minecraft:chest_minecart, tag=SketchTarget] run function #oh_my_dat:please
 
-# クリック前のインベントリのデータを取得
+# 選択前のインベントリのデータを取得
     data modify storage sketch:temp LastInv set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.LastInv
 
-# クリック後のインベントリのデータを取得
+# 選択後のインベントリのデータを取得
     data modify storage sketch:temp NewInv set from entity @e[type=minecraft:chest_minecart, tag=SketchTarget, limit=1] Items
 
 function sketch:api/unlink
@@ -172,7 +172,7 @@ function sketch:api/unlink
     data modify storage sketch: out.id set from storage sketch: out.item.tag.Sketch.id
 
 # コールバック
-    execute at @s run function #sketch:on_click
+    execute at @s run function #sketch:on_select
 
 
 ## 後処理

@@ -6,4 +6,4 @@
 
 # コールバック
     data modify storage sketch: out.type set value "CLICK"
-    function sketch:core/common/callback
+    function sketch:core/common/select

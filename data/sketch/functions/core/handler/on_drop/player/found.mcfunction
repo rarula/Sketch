@@ -6,7 +6,7 @@
 
 # コールバック
     data modify storage sketch: out.type set value "DROP"
-    function sketch:core/common/callback
+    function sketch:core/common/select
 
 # リセット
     scoreboard players remove @s SketchDrop 1
