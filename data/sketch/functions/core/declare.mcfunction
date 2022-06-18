@@ -13,7 +13,7 @@
 # @public
 #declare tag SketchEntity
 
-#> 最後にインタラクトしたSketchに登録されているチェスト付きトロッコ
+#> 最後にインタラクトした、Sketchに登録されているチェスト付きトロッコ
 # @public
 #declare tag SketchTarget
 
