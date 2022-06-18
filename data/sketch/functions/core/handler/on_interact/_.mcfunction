@@ -21,8 +21,9 @@
 # コールバック
     execute at @s run function #sketch:on_open
 
-execute store result score _ OhMyDatID run data get storage sketch:temp OhMyDatID
-function #oh_its_dat:please
+# インタラクト先のエンティティのOhMyDatを呼び出す
+    execute store result score _ OhMyDatID run data get storage sketch:temp OhMyDatID
+    function #oh_its_dat:please
 
 # コールバック時に渡すデータを設定
     data modify storage sketch: out.id set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.id
