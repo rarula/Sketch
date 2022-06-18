@@ -5,7 +5,7 @@
 - 1.19
 
 ## 依存ライブラリ
-- 赤石愛様 :
+- 赤石愛様：
   - [Close Detector 1.19](https://github.com/Ai-Akaishi/CloseDetector) (MIT License)
   - [Oh! My Dat! 1.19](https://github.com/Ai-Akaishi/OhMyDat) (MIT License)
   - [Player Item Tuner 1.19](https://github.com/Ai-Akaishi/PlayerItemTuner) (MIT License)
@@ -15,7 +15,7 @@
 配置されたアイテムからメニューを作成します
 ```mcfunction
 # ボタンを配置する
-item replace block 10000 -64 10000 container.11 with minecraft:barrier{Sketch:{id:"EXAMPLE_ID"}, display:{Name:'"ぼたん"'}}
+item replace block 10000 -64 10000 container.11 with minecraft:barrier{Sketch:{id:"EXAMPLE_ID"}, display:{Name:'"ボタン"'}}
 item modify block 10000 -64 10000 container.11 sketch:button
 
 # 配置したアイテムからメニューを作成
@@ -26,7 +26,7 @@ function sketch:api/create
 container.0 に配置されたアイテムをメニューに敷き詰めます
 ```mcfunction
 # 敷き詰めるアイテムを配置
-item replace block 10000 -64 10000 container.0 with minecraft:gray_stained_glass_pane{Sketch:{id:"BACKGROUND"}}
+item replace block 10000 -64 10000 container.0 with minecraft:gray_stained_glass_pane{Sketch:{id:"BACKGROUND"}, display:{Name:'"."'}}
 item modify block 10000 -64 10000 container.0 sketch:button
 
 # ボタンを敷き詰める
@@ -42,7 +42,8 @@ function sketch:api/refresh
 ### [`sketch:api/register`](data/sketch/functions/api/register.mcfunction)
 実行者のチェスト付きトロッコをSketchに登録します
 ```mcfunction
-execute as @e[type=minecraft:chest_minecart] run function sketch:api/register
+summon minecraft:chest_minecart ~ ~ ~ {Tags:["ExampleEntity"]}
+execute as @e[type=minecraft:chest_minecart, tag=ExampleEntity] run function sketch:api/register
 ```
 
 ### [`sketch:api/link`](data/sketch/functions/api/link.mcfunction)
