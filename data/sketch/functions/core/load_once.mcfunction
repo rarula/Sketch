@@ -1,8 +1,8 @@
-#> sketch:core/load/init
+#> sketch:core/load_once
 #
 # データパックが初めてロードされたときに呼び出される
 #
-# @within function sketch:core/load/_
+# @within function sketch:core/load
 
 #> scoreboard設定
 # @within sketch:**
