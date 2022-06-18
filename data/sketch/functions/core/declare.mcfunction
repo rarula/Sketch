@@ -3,15 +3,30 @@
 
 #>
 # @public
-    #alias vector Sketch 10000 -64 10000
-    #declare storage sketch:
-    #declare tag SketchEntity
-    #declare tag SketchTarget
+#alias vector Sketch 10000 -64 10000
 
 #>
+# @public
+#declare storage sketch:
+
+#> Sketchに登録されているチェスト付きトロッコ
+# @public
+#declare tag SketchEntity
+
+#> 最後にインタラクトしたSketchに登録されているチェスト付きトロッコ
+# @public
+#declare tag SketchTarget
+
+#> 一時処理用のストレージ
 # @within sketch:**
-    #declare storage sketch:temp
-    #declare score_holder $65536
+#declare storage sketch:temp
+
+#> 定数
+# @within sketch:**
+#declare score_holder $65536
+
+#> インタラクト先探索用のタグ
+# @within sketch:**
     #declare tag Sketch.Filter.0-0
     #declare tag Sketch.Filter.0-1
     #declare tag Sketch.Filter.1-0
