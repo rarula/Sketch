@@ -15,7 +15,7 @@
 配置されたアイテムからメニューを作成します
 ```mcfunction
 # ボタンを配置する
-item replace block 10000 -64 10000 container.11 with minecraft:barrier{Sketch:{id:"EXAMPLE_ID"}, display:{Name:'"ボタン"'}}
+item replace block 10000 -64 10000 container.11 with minecraft:barrier{Sketch:{id:"EXAMPLE_BUTTON"}, display:{Name:'"ボタン"'}}
 item modify block 10000 -64 10000 container.11 sketch:button
 
 # 配置したアイテムからメニューを作成
@@ -26,7 +26,7 @@ function sketch:api/create
 container.0 に配置されたアイテムをメニューに敷き詰めます
 ```mcfunction
 # 敷き詰めるアイテムを配置
-item replace block 10000 -64 10000 container.0 with minecraft:gray_stained_glass_pane{Sketch:{id:"BACKGROUND"}, display:{Name:'"."'}}
+item replace block 10000 -64 10000 container.0 with minecraft:gray_stained_glass_pane{Sketch:{id:"EXAMPLE_BACKGROUND"}, display:{Name:'"."'}}
 item modify block 10000 -64 10000 container.0 sketch:button
 
 # ボタンを敷き詰める
@@ -79,6 +79,9 @@ function sketch:api/unlink
 | storage sketch: out.item | Item | 選択したアイテムのNBT |
 | storage sketch: out.items | Item[] | 選択後のメニューに含まれる外部のアイテムのリスト |
 | storage sketch: out.type | "CLICK" \| "DROP" | 選択の種類（クリックかドロップ） |
+
+## 注意
+- このデータパックは、依存ライブラリ [Close Detector](https://github.com/Ai-Akaishi/CloseDetector) より優先度を高く設定しないと正常に動作しません
 
 ## ライセンス
 [CC0-1.0 License](LICENSE)
