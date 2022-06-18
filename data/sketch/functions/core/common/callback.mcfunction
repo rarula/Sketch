@@ -15,10 +15,10 @@ function sketch:api/link
 
 execute as @e[type=minecraft:chest_minecart, tag=SketchTarget] run function #oh_my_dat:please
 
-# クリック前のインベントリを取得
+# クリック前のインベントリのデータを取得
     data modify storage sketch:temp LastInv set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.LastInv
 
-# クリック後のインベントリを取得
+# クリック後のインベントリのデータを取得
     data modify storage sketch:temp NewInv set from entity @e[type=minecraft:chest_minecart, tag=SketchTarget, limit=1] Items
 
 function sketch:api/unlink
