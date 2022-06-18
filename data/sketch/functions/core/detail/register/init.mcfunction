@@ -6,6 +6,9 @@
     #declare score_holder $Index
     #declare score_holder $TempIndex
 
+# OhMyDatを割り当て
+    function #oh_my_dat:please
+
 # インタラクト先探索用にIdを割り当て
     scoreboard players add $Index Sketch 1
     execute if score $Index Sketch matches 32768 run scoreboard players set $Index Sketch 1
