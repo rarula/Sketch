@@ -69,16 +69,16 @@ function sketch:api/unlink
 プレイヤーがメニューを閉じたときに呼び出されます
 | 出力 | 型 | 説明 |
 | :- | :- | :- |
-| storage sketch: out.items | Item[] | 閉じた後のメニューに含まれる外部のアイテムのリスト |
+| storage sketch: out.unknownItems | Item[] | 閉じた後のメニューに含まれる未知のアイテムのリスト |
 
 ### [`#sketch:on_select`](data/sketch/tags/functions/on_select.json)
 プレイヤーがボタンを選択したときに呼び出されます
 | 出力 | 型 | 説明 |
 | :- | :- | :- |
 | storage sketch: out.id | any | 選択したボタンのid |
-| storage sketch: out.item | Item | 選択したアイテムのNBT |
-| storage sketch: out.items | Item[] | 選択後のメニューに含まれる外部のアイテムのリスト |
-| storage sketch: out.type | "CLICK" \| "DROP" | 選択の種類（クリックかドロップ） |
+| storage sketch: out.selectedItem | Item | 選択したアイテムのNBT |
+| storage sketch: out.unknownItems | Item[] | 選択後のメニューに含まれる未知のアイテムのリスト |
+| storage sketch: out.selectionType | "CLICK" \| "DROP" | 選択の種類（クリックかドロップ） |
 
 ## 注意
 - このデータパックは、依存ライブラリ [Close Detector](https://github.com/Ai-Akaishi/CloseDetector) より優先度を高く設定しないと正常に動作しません

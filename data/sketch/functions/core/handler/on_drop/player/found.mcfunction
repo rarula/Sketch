@@ -5,7 +5,7 @@
 # @within function sketch:core/handler/on_drop/player/check_uuid
 
 # コールバック
-    data modify storage sketch: out.type set value "DROP"
+    data modify storage sketch: out.selectionType set value "DROP"
     function sketch:core/common/select
 
 # リセット

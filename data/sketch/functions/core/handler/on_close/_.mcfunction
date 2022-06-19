@@ -18,7 +18,7 @@ function sketch:api/unlink
 ## メイン処理
 # コールバック時に渡すデータを設定
     data remove storage sketch:temp Inv[{tag:{Sketch:{}}}]
-    data modify storage sketch: out.items set from storage sketch:temp Inv
+    data modify storage sketch: out.unknownItems set from storage sketch:temp Inv
 
 # コールバック
     function #sketch:on_close
