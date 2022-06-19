@@ -168,7 +168,7 @@ function sketch:api/unlink
 
 # コールバック時に渡すデータを設定
     data remove storage sketch:temp CloneNewInv[{tag:{Sketch:{}}}]
-    data modify storage sketch: out.unknownItems set from storage sketch:temp CloneNewInv
+    data modify storage sketch: out.otherItems set from storage sketch:temp CloneNewInv
     data modify storage sketch: out.id set from storage sketch: out.selectedItem.tag.Sketch.id
 
 # コールバック
