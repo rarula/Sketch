@@ -107,7 +107,7 @@ Sketchは、インベントリメニューの構成を容易にするためのAP
 - [イベントについて](https://github.com/raruData/Sketch/wiki/Events)
 
 ## 注意
-- 依存ライブラリ [Close Detector](https://github.com/Ai-Akaishi/CloseDetector) より優先度を高く設定しないと、データパックは正常に動作しない可能性があります
+- 依存ライブラリ [Close Detector](https://github.com/Ai-Akaishi/CloseDetector) より優先度を高く設定しないと、データパックが正常に動作しない可能性があります
 
 ## ライセンス
 [CC0-1.0 License](LICENSE)
