@@ -83,7 +83,7 @@ execute if data storage sketch: out{id:"COBBLESTONE_BUTTON"} run ...
 ```
 
 ### メニューを表示する
-1. `data/sketch/tags/functions/on_open.json` に、[チェスト付きトロッコを用意する](#チェスト付きトロッコを用意する) で用意したチェストを開いた時に呼び出されるファイルを追加します  
+1. `data/sketch/tags/functions/on_open.json` に、[チェスト付きトロッコを用意する](#チェスト付きトロッコを用意する) で用意したトロッコ を開いた時に呼び出されるファイルを追加します  
 ```json
 {
     "values": [
@@ -103,8 +103,8 @@ function example:menu/foo
 
 ## その他
 Sketchは、インベントリメニューの構成を容易にするためのAPIやイベントを提供します
-- [APIについて](https://github.com/raruData/Sketch/wiki/API)
-- [イベントについて](https://github.com/raruData/Sketch/wiki/Event)
+- [APIについて](https://github.com/raruData/Sketch/wiki/APIs)
+- [イベントについて](https://github.com/raruData/Sketch/wiki/Events)
 
 ## 注意
 - 依存ライブラリ [Close Detector](https://github.com/Ai-Akaishi/CloseDetector) より優先度を高く設定しないと、データパックは正常に動作しない可能性があります
