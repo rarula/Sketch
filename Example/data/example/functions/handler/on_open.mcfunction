@@ -1,6 +1,6 @@
 #> example:handler/on_open
 #
-# メニューを開いたときに呼び出される
+# 登録済みのチェスト付きトロッコを開いたときに呼び出される
 #
 # @within tag/function sketch:on_open
 
