@@ -17,78 +17,97 @@
   - [Oh! My Dat! 1.19](https://github.com/Ai-Akaishi/OhMyDat) (MIT License)
   - [Player Item Tuner 1.19](https://github.com/Ai-Akaishi/PlayerItemTuner) (MIT License)
 
-## API
-### [`sketch:api/create`](data/sketch/functions/api/create.mcfunction)
-配置されたアイテムからメニューを作成します
+## 使い方
+### チェスト付きトロッコを用意する
+1. メニューを設定したいチェスト付きトロッコを実行者として、function `sketch:api/register` を呼び出します
 ```mcfunction
-# ボタンを配置する
-item replace block 10000 -64 10000 container.11 with minecraft:barrier{Sketch:{id:"EXAMPLE_BUTTON"}, display:{Name:'"ボタン"'}}
-item modify block 10000 -64 10000 container.11 sketch:button
+execute as @e[type=minecraft:chest_minecart] run function sketch:api/register
+```
 
-# 配置したアイテムからメニューを作成
+### メニューを作成する
+1. 座標 10000 -64 10000 に設置されているコンテナに、メニューに配置したいアイテムを設定します
+```mcfunction
+#> example:menu/foo
+
+# 普通のアイテムを配置
+item replace block 10000 -64 10000 container.10 with minecraft:dirt
+```
+
+2. 選択時に何らかの動作をさせたいアイテムには、item_modifier `sketch:button` を適用します
+```mcfunction
+#> example:menu/foo
+...
+
+# ボタンを配置
+item replace block 10000 -64 10000 container.12 with minecraft:cobblestone
+item modify block 10000 -64 10000 container.12 sketch:button
+```
+
+3. コンテナにアイテムを設定し終えたら function `sketch:api/create` を呼び出します
+```mcfunction
+#> example:menu/foo
+...
+
+# 設定したメニューを作成する
 function sketch:api/create
 ```
 
-### [`sketch:api/fill`](data/sketch/functions/api/fill.mcfunction)
-container.0 に配置されたアイテムをメニューに敷き詰めます
+### ボタンの動作を設定する
+1. item_modifier `sketch:button` が適用されるアイテムに、ボタンを識別するためのidを設定します  
+idはどんな型でも設定できます
 ```mcfunction
-# 敷き詰めるアイテムを配置
-item replace block 10000 -64 10000 container.0 with minecraft:gray_stained_glass_pane{Sketch:{id:"EXAMPLE_BACKGROUND"}, display:{Name:'"."'}}
-item modify block 10000 -64 10000 container.0 sketch:button
-
-# ボタンを敷き詰める
-function sketch:api/fill
-```
-
-### [`sketch:api/refresh`](data/sketch/functions/api/refresh.mcfunction)
-メニューを初期化します
-```mcfunction
-function sketch:api/refresh
-```
-
-### [`sketch:api/register`](data/sketch/functions/api/register.mcfunction)
-実行者のチェスト付きトロッコをSketchに登録します
-```mcfunction
-summon minecraft:chest_minecart ~ ~ ~ {Tags:["ExampleEntity"]}
-execute as @e[type=minecraft:chest_minecart, tag=ExampleEntity] run function sketch:api/register
-```
-
-### [`sketch:api/link`](data/sketch/functions/api/link.mcfunction)
-最後にインタラクトした、Sketchに登録されているチェスト付きトロッコと紐付けます  
-紐付けられたエンティティには `SketchTarget` タグが設定されます
-```mcfunction
-function sketch:api/link
+#> example:menu/foo
 ...
+
+# ボタンを配置
+# "COBBLESTONE_BUTTON" をidとして設定
+item replace block 10000 -64 10000 container.12 with minecraft:cobblestone{Sketch:{id:"COBBLESTONE_BUTTON"}}
+item modify block 10000 -64 10000 container.12 sketch:button
 ```
 
-### [`sketch:api/unlink`](data/sketch/functions/api/unlink.mcfunction)
-最後にインタラクトした、Sketchに登録されているチェスト付きトロッコとの紐付けを解除します  
+2. `data/sketch/tags/functions/on_select.json` に、ボタン選択時に呼び出されるファイルを追加します  
+```json
+{
+    "values": [
+        "example:handler/on_select"
+    ]
+}
+```
+
+3. 追加したファイルが呼び出されるとき、storage `sketch: out.id` には選択されたボタンのidが入っているので、ボタンごとに動作を設定することができます
 ```mcfunction
-...
-function sketch:api/unlink
+#> example:handler/on_select
+
+# 選択したボタンのidが "COBBLESTONE_BUTTON" であれば...な処理をする
+execute if data storage sketch: out{id:"COBBLESTONE_BUTTON"} run ...
 ```
 
-## イベント
-### [`#sketch:on_open`](data/sketch/tags/functions/on_open.json)
-プレイヤーがメニューを開いたときに呼び出されます
+### メニューを表示する
+1. `data/sketch/tags/functions/on_open.json` に、[チェスト付きトロッコを用意する](#チェスト付きトロッコを用意する) で用意したチェストを開いた時に呼び出されるファイルを追加します  
+```json
+{
+    "values": [
+        "example:handler/on_open"
+    ]
+}
+```
 
-### [`#sketch:on_close`](data/sketch/tags/functions/on_close.json)
-プレイヤーがメニューを閉じたときに呼び出されます
-| 出力 | 型 | 説明 |
-| :- | :- | :- |
-| storage sketch: out.unknownItems | Item[] | 閉じた後のメニューに含まれる未知のアイテムのリスト |
+2. [メニューを作成する](#メニューを作成する) で作成したファイルを呼び出します  
+このとき、開いたチェスト付きトロッコにのみメニューが作成されます
+```mcfunction
+#> example:handler/on_open
 
-### [`#sketch:on_select`](data/sketch/tags/functions/on_select.json)
-プレイヤーがボタンを選択したときに呼び出されます
-| 出力 | 型 | 説明 |
-| :- | :- | :- |
-| storage sketch: out.id | any | 選択したボタンのid |
-| storage sketch: out.selectedItem | Item | 選択したアイテムのNBT |
-| storage sketch: out.unknownItems | Item[] | 選択後のメニューに含まれる未知のアイテムのリスト |
-| storage sketch: out.selectionType | "CLICK" \| "DROP" | 選択の種類（クリックかドロップ） |
+# 開いたチェスト付きトロッコにのみメニューを作成し、表示する
+function example:menu/foo
+```
+
+## その他
+Sketchは、インベントリメニューの構成を容易にするためのAPIやイベントを提供します
+- [APIについて](https://github.com/raruData/Sketch/wiki/API)
+- [イベントについて](https://github.com/raruData/Sketch/wiki/Event)
 
 ## 注意
-- このデータパックは、依存ライブラリ [Close Detector](https://github.com/Ai-Akaishi/CloseDetector) より優先度を高く設定しないと正常に動作しません
+- 依存ライブラリ [Close Detector](https://github.com/Ai-Akaishi/CloseDetector) より優先度を高く設定しないと、データパックは正常に動作しない可能性があります
 
 ## ライセンス
 [CC0-1.0 License](LICENSE)
