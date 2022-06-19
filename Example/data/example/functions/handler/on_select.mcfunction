@@ -9,8 +9,7 @@
     execute if data storage sketch: out.id{PlaySound:"Select"} run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.5 1
 
 # メニューに入れたアイテムを保存
-    execute if data storage sketch: out.id{ClickEvent:"Next"} run function example:menu/container/save_contents
-    execute if data storage sketch: out.id{ClickEvent:"Back"} run function example:menu/container/save_contents
+    execute if data storage sketch: out.id{Menu:"Container"} run function example:menu/container/save_contents
 
 # ボタン
     execute if data storage sketch: out.id{ClickEvent:"Next"} run scoreboard players add @s Page 1

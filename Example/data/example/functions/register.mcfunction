@@ -5,7 +5,7 @@
 # @public
 
 # Sketch用のチェスト付きトロッコを召喚
-    summon minecraft:chest_minecart ~ ~ ~ {CustomName:'""', Silent:true, NoGravity:true, Invulnerable:true, Tags:["ExampleEntity", "ExampleEntityInit"]}
+    summon minecraft:chest_minecart ~ ~ ~ {CustomName:'""', Silent:true, NoGravity:true, Invulnerable:true, Tags:["ExampleEntity", "ExampleEntityInit"], DisplayState:{Name:"minecraft:air"}, CustomDisplayTile:true}
 
 # Sketchに登録
     execute as @e[type=minecraft:chest_minecart, tag=ExampleEntityInit] run function sketch:api/register
