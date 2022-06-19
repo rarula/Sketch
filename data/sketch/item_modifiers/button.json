@@ -1,4 +1,4 @@
 {
     "function": "minecraft:set_nbt",
-    "tag": "{Sketch:{Button:true}}"
+    "tag": "{Sketch:{AnyButton:true, ItemType:\"BUTTON\"}}"
 }
