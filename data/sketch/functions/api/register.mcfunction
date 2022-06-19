@@ -1,6 +1,6 @@
 #> sketch:api/register
 #
-# 実行者をSketchに登録します
+# 実行者のチェスト付きトロッコをSketchに登録します
 #
 # @api
 

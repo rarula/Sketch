@@ -8,7 +8,7 @@
 
 function #oh_my_dat:please
 
-# Guiに配置されるアイテムのデータをストレージに移動
+# メニューに配置されるアイテムのデータをストレージに移動
     data modify storage sketch:temp Items set from block 10000 -64 10000 Items
 
 # 設定されているスロットにアイテムを配置
