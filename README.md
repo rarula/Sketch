@@ -83,7 +83,7 @@ execute if data storage sketch: out{id:"COBBLESTONE_BUTTON"} run ...
 ```
 
 ### メニューを表示する
-1. `data/sketch/tags/functions/on_open.json` に、[チェスト付きトロッコを用意する](#チェスト付きトロッコを用意する) で用意したトロッコ を開いた時に呼び出されるファイルを追加します  
+1. `data/sketch/tags/functions/on_open.json` に、チェスト付きトロッコを開いた時に呼び出されるファイルを追加します
 ```json
 {
     "values": [
