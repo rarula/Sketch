@@ -3,7 +3,7 @@
 # Sketch
 チェスト付きトロッコによるインベントリメニューを簡単に作成するためのフレームワーク
 
-![Sketch v1.0.0](https://user-images.githubusercontent.com/74240663/174467815-c4a93609-aff7-4e39-8395-7bcda4f26211.gif)
+![Sketch v1.0.0](https://user-images.githubusercontent.com/74240663/174467815-c4a93609-aff7-4e39-8395-7bcda4f26211.gif)  
 この例のデータパックは [Example](Example) ディレクトリにあります
 
 </div>
