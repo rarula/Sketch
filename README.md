@@ -11,7 +11,11 @@
 ## 対応バージョン
 - 1.19
 
+## ダウンロード
+[Releases](https://github.com/raruData/Sketch/releases) を参照してください
+
 ## 依存ライブラリ
+このデータパックを使用するためには、以下のライブラリを導入する必要があります
 - 赤石愛様：
   - [Close Detector 1.19](https://github.com/Ai-Akaishi/CloseDetector) (MIT License)
   - [Oh! My Dat! 1.19](https://github.com/Ai-Akaishi/OhMyDat) (MIT License)
@@ -101,13 +105,16 @@ execute if data storage sketch: out{id:"COBBLESTONE_BUTTON"} run ...
 function example:menu/foo
 ```
 
-## その他
+### その他
 Sketchは、インベントリメニューの構成を容易にするためのAPIやイベントを提供します
 - [APIについて](https://github.com/raruData/Sketch/wiki/APIs)
 - [イベントについて](https://github.com/raruData/Sketch/wiki/Events)
 
 ## 注意
-- 依存ライブラリ [Close Detector](https://github.com/Ai-Akaishi/CloseDetector) より優先度を高く設定しないと、データパックが正常に動作しない可能性があります
+- 座標 10000 10000 をforceloadし、座標 10000 -64 10000 にシュルカーボックスを配置します
+
+## 連絡
+https://twitter.com/raruData_
 
 ## ライセンス
-[CC0-1.0 License](LICENSE)
+[CC0-1.0](LICENSE)
