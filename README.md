@@ -114,7 +114,7 @@ Sketchは、インベントリメニューの構成を容易にするためのAP
 - 座標 10000 10000 をforceloadし、座標 10000 -64 10000 にシュルカーボックスを配置します
 
 ## 連絡
-https://twitter.com/raruData_
+<https://twitter.com/raruData_>
 
 ## ライセンス
 [CC0-1.0](LICENSE)
