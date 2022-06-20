@@ -59,3 +59,7 @@
     #declare tag Sketch.Filter.14-1
     #declare tag Sketch.Filter.15-0
     #declare tag Sketch.Filter.15-1
+
+#> メニューを開いているプレイヤー
+# @within sketch:**
+#declare tag Sketch.InMenu

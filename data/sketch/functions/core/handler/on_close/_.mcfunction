@@ -5,6 +5,9 @@
 # @within function sketch:core/handler/on_close/check_container_type
 
 ## 前処理
+# リセット
+    tag @s remove Sketch.InMenu
+
 function sketch:api/link
 
 execute as @e[type=minecraft:chest_minecart, tag=SketchTarget] run function #oh_my_dat:please
