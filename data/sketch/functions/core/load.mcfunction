@@ -5,4 +5,4 @@
 # @within tag/function minecraft:load
 
 # データパックが未初期化であれば初期化
-    execute unless data storage sketch: {Version:"1.0.0"} run function sketch:core/load_once
+    execute unless data storage sketch: {Version:"1.0.1"} run function sketch:core/load_once

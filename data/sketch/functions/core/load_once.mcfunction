@@ -24,4 +24,4 @@
 
 
 # 初期化済みとして設定
-    data modify storage sketch: Version set value "1.0.0"
+    data modify storage sketch: Version set value "1.0.1"
