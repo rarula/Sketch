@@ -9,10 +9,6 @@
 # @public
 #declare storage sketch:
 
-#> Sketchに登録済みのチェスト付きトロッコ
-# @public
-#declare tag SketchEntity
-
 #> 最後に開いた Sketchに登録済みのチェスト付きトロッコ
 # @public
 #declare tag SketchTarget
@@ -59,6 +55,10 @@
     #declare tag Sketch.Filter.14-1
     #declare tag Sketch.Filter.15-0
     #declare tag Sketch.Filter.15-1
+
+#> Sketchに登録済みのチェスト付きトロッコ
+# @within sketch:**
+#declare tag SketchEntity
 
 #> メニューを開いているプレイヤー
 # @within sketch:**
