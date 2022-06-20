@@ -356,6 +356,6 @@
         ]
     ],
     "rewards": {
-        "function": "sketch:core/handler/on_interact/_"
+        "function": "sketch:core/handler/on_open/_"
     }
 }
