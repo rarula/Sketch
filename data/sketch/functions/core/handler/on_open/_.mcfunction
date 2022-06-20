@@ -1,6 +1,6 @@
 #> sketch:core/handler/on_open/_
 #
-# チェスト付きトロッコにインタラクトしたときに呼び出される
+# チェスト付きトロッコを開いたときに呼び出される
 #
 # @within advancement sketch:open
 

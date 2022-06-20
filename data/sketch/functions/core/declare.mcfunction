@@ -9,11 +9,11 @@
 # @public
 #declare storage sketch:
 
-#> Sketchに登録されているチェスト付きトロッコ
+#> Sketchに登録済みのチェスト付きトロッコ
 # @public
 #declare tag SketchEntity
 
-#> 最後にインタラクトした、Sketchに登録されているチェスト付きトロッコ
+#> 最後に開いた Sketchに登録済みのチェスト付きトロッコ
 # @public
 #declare tag SketchTarget
 
