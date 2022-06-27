@@ -1,4 +1,4 @@
-#> sketch:core/common/select
+#> sketch:core/select/_
 #
 # 汎用コールバック処理
 #
