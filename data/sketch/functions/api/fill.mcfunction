@@ -9,4 +9,4 @@
 #
 # @api
 
-function sketch:core/detail/fill
+function sketch:api/detail/fill

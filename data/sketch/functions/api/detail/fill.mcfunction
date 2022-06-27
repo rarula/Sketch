@@ -1,4 +1,4 @@
-#> sketch:core/detail/fill
+#> sketch:api/detail/fill
 #
 # @input
 #   vector 10000 -64 10000

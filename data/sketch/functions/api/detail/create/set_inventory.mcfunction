@@ -1,10 +1,10 @@
-#> sketch:core/detail/create/set_inventory
+#> sketch:api/detail/create/set_inventory
 #
 # @input
 #   vector 10000 -64 10000
 #       container.0~26
 #
-# @within function sketch:core/detail/create/_
+# @within function sketch:api/detail/create/_
 
 function #oh_my_dat:please
 

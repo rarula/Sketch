@@ -5,4 +5,4 @@
 #
 # @api
 
-function sketch:core/detail/link
+function sketch:api/detail/link

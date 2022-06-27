@@ -4,4 +4,4 @@
 #
 # @api
 
-function sketch:core/detail/refresh
+function sketch:api/detail/refresh

@@ -4,4 +4,4 @@
 #
 # @api
 
-function sketch:core/detail/register/_
+function sketch:api/detail/register/_

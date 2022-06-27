@@ -1,4 +1,4 @@
-#> sketch:core/detail/refresh
+#> sketch:api/detail/refresh
 # @within function sketch:api/refresh
 
 function sketch:api/link

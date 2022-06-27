@@ -9,4 +9,4 @@
 #
 # @api
 
-function sketch:core/detail/create/_
+function sketch:api/detail/create/_

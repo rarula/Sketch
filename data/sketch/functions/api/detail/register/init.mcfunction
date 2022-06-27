@@ -1,5 +1,5 @@
-#> sketch:core/detail/register/init
-# @within function sketch:core/detail/register/_
+#> sketch:api/detail/register/init
+# @within function sketch:api/detail/register/_
 
 #>
 # @private

@@ -1,4 +1,4 @@
-#> sketch:core/detail/link
+#> sketch:api/detail/link
 # @within function sketch:api/link
 
 #>

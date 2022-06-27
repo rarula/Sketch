@@ -1,4 +1,4 @@
-#> sketch:core/detail/create/_
+#> sketch:api/detail/create/_
 #
 # @input
 #   vector 10000 -64 10000
@@ -9,7 +9,7 @@
 function sketch:api/link
 
 # インベントリに指定されたアイテムを配置
-    execute as @e[type=minecraft:chest_minecart, tag=SketchTarget] run function sketch:core/detail/create/set_inventory
+    execute as @e[type=minecraft:chest_minecart, tag=SketchTarget] run function sketch:api/detail/create/set_inventory
 
 function sketch:api/unlink
 

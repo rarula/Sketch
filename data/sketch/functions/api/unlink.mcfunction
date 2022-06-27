@@ -4,4 +4,4 @@
 #
 # @api
 
-function sketch:core/detail/unlink
+function sketch:api/detail/unlink
