@@ -1,120 +1,63 @@
 <div align=center>
 
 # Sketch
-チェスト付きトロッコによるインベントリメニューを簡単に作成するためのフレームワーク
+チェスト付きトロッコ・エンダーチェスト によるインベントリメニューを簡単に作成するためのフレームワーク
 
-![Sketch v1.0.0](https://user-images.githubusercontent.com/74240663/174467815-c4a93609-aff7-4e39-8395-7bcda4f26211.gif)  
+![Sketch v2.0.0_ja](https://user-images.githubusercontent.com/74240663/229465231-a4b20e5b-0f1c-422d-a85e-499710039427.gif)  
 この例のデータパックは [Example](Example) ディレクトリにあります
 
 </div>
 
 ## 対応バージョン
-- 1.19
+- 1.19.4
 
 ## ダウンロード
-[Releases](https://github.com/raruData/Sketch/releases) を参照してください
+[Releases](https://github.com/rarula/Sketch/releases) を参照してください
 
 ## 依存ライブラリ
-このデータパックを使用するためには、以下のライブラリを導入する必要があります
-- 赤石愛様：
-  - [Close Detector 1.19](https://github.com/Ai-Akaishi/CloseDetector) (MIT License)
+このデータパックを使用するためには、以下のデータパックを導入する必要があります
+- 赤石愛 様：
   - [Oh! My Dat! 1.19](https://github.com/Ai-Akaishi/OhMyDat) (MIT License)
+  - [Close Detector 1.19](https://github.com/Ai-Akaishi/CloseDetector) (MIT License)
   - [Player Item Tuner 1.19](https://github.com/Ai-Akaishi/PlayerItemTuner) (MIT License)
 
 ## 使い方
-### チェスト付きトロッコを用意する
-1. メニューを設定したいチェスト付きトロッコを実行者として、function `sketch:api/register` を呼び出します
 ```mcfunction
-execute as @e[type=minecraft:chest_minecart] run function sketch:api/register
-```
+#> menu:main/
 
-### メニューを作成する
-1. 座標 10000 -64 10000 に設置されているコンテナに、メニューに配置したいアイテムを設定します
+item replace block 10000 0 10000 container.0 with minecraft:gray_stained_glass_pane
+data modify storage sketch: in.key set value "f"
+function sketch:api/register_item/button
+
+item replace block 10000 0 10000 container.0 with minecraft:gold_block
+data modify storage sketch: in.key set value "G"
+data modify storage sketch: in.listener set value "give"
+function sketch:api/register_item/button
+
+
+data modify storage sketch: in.contents append value [f, f, f, f, f, f, f, f, f]
+data modify storage sketch: in.contents append value [f, -, -, -, G, -, -, -, f]
+data modify storage sketch: in.contents append value [f, f, f, f, f, f, f, f, f]
+
+data modify storage sketch: in.id set value "main"
+function sketch:api/build/auto
+```
 ```mcfunction
-#> example:menu/foo
+#> menu:main/listener
 
-# 普通のアイテムを配置
-item replace block 10000 -64 10000 container.10 with minecraft:dirt
+execute if data storage sketch: callback{listener:"give"} run give @s minecraft:gold_block 1
 ```
 
-2. 選択時に何らかの動作をさせたいアイテムには、item_modifier `sketch:button` を適用します
-```mcfunction
-#> example:menu/foo
-...
-
-# ボタンを配置
-item replace block 10000 -64 10000 container.12 with minecraft:cobblestone
-item modify block 10000 -64 10000 container.12 sketch:button
-```
-
-3. コンテナにアイテムを設定し終えたら function `sketch:api/create` を呼び出します
-```mcfunction
-#> example:menu/foo
-...
-
-# 設定したメニューを作成する
-function sketch:api/create
-```
-
-### ボタンの動作を設定する
-1. item_modifier `sketch:button` が適用されるアイテムに、ボタンを識別するためのidを設定します  
-idはどんな型でも設定できます
-```mcfunction
-#> example:menu/foo
-...
-
-# ボタンを配置
-# "COBBLESTONE_BUTTON" をidとして設定
-item replace block 10000 -64 10000 container.12 with minecraft:cobblestone{Sketch:{id:"COBBLESTONE_BUTTON"}}
-item modify block 10000 -64 10000 container.12 sketch:button
-```
-
-2. `data/sketch/tags/functions/on_select.json` に、ボタン選択時に呼び出されるファイルを追加します  
-```json
-{
-    "values": [
-        "example:handler/on_select"
-    ]
-}
-```
-
-3. 追加したファイルが呼び出されるとき、storage `sketch: out.id` には選択されたボタンのidが入っているので、ボタンごとに動作を設定することができます
-```mcfunction
-#> example:handler/on_select
-
-# 選択したボタンのidが "COBBLESTONE_BUTTON" であれば...な処理をする
-execute if data storage sketch: out{id:"COBBLESTONE_BUTTON"} run ...
-```
-
-### メニューを表示する
-1. `data/sketch/tags/functions/on_open.json` に、チェスト付きトロッコを開いた時に呼び出されるファイルを追加します
-```json
-{
-    "values": [
-        "example:handler/on_open"
-    ]
-}
-```
-
-2. [メニューを作成する](#メニューを作成する) で作成したファイルを呼び出します  
-このとき、開いたチェスト付きトロッコにのみメニューが作成されます
-```mcfunction
-#> example:handler/on_open
-
-# 開いたチェスト付きトロッコにのみメニューを作成し、表示する
-function example:menu/foo
-```
-
-### その他
-Sketchは、インベントリメニューの構成を容易にするためのAPIやイベントを提供します
-- [APIについて](https://github.com/raruData/Sketch/wiki/APIs)
-- [イベントについて](https://github.com/raruData/Sketch/wiki/Events)
+詳しい使い方は こちら を参照してください
 
 ## 注意
-- 座標 10000 10000 をforceloadし、座標 10000 -64 10000 にシュルカーボックスを配置します
+- 座標 10000 10000 をforceloadし、以下の座標にシュルカーボックスを配置します
+    - 10000 0 10000
+    - 10000 1 10000
+    - 10000 2 10000
 
 ## 連絡
-<https://twitter.com/raruData_>
+<https://twitter.com/rarula_>
 
 ## ライセンス
 [CC0-1.0](LICENSE)

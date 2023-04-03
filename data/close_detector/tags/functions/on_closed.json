@@ -1,5 +1,7 @@
 {
+    "replace": false,
     "values": [
-        "sketch:core/handler/on_close/check_container_type"
+        "sketch:core/emitter/check_container_close/chest_minecart",
+        "sketch:core/emitter/check_container_close/ender_chest"
     ]
 }

@@ -1,8 +1,8 @@
 #> sketch:core/load
 #
-# load時に呼び出される
+# load時に実行される
 #
 # @within tag/function minecraft:load
 
-# データパックが未初期化であれば初期化
-    execute unless data storage sketch: {Version:"1.0.1"} run function sketch:core/load_once
+# 初回ロード時実行
+    execute unless data storage sketch: {Version:"2.0.0"} run function sketch:core/load_once

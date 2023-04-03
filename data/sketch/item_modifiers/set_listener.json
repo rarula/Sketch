@@ -1,0 +1,14 @@
+{
+    "function": "minecraft:copy_nbt",
+    "source": {
+        "type": "minecraft:storage",
+        "source": "sketch:"
+    },
+    "ops": [
+        {
+            "op": "replace",
+            "source": "in.listener",
+            "target": "Sketch.listener"
+        }
+    ]
+}

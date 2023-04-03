@@ -1,27 +1,25 @@
 #> sketch:core/load_once
 #
-# データパックが初めてロードされたときに呼び出される
+# 初回ロード時に実行される
 #
 # @within function sketch:core/load
 
-#> scoreboard設定
-# @within sketch:**
-    scoreboard objectives add SketchDrop custom:minecraft.drop
-    scoreboard objectives add SketchId dummy
+# バージョン設定
+    data modify storage sketch: Version set value "2.0.0"
+
+
+# ストレージ設定
+    data modify storage sketch:core GlobalItemInfoMap set value []
+
+
+# スコアボード設定
     scoreboard objectives add Sketch dummy
+    scoreboard objectives add Sketch.Id dummy
+    scoreboard objectives add Sketch.Drop custom:minecraft.drop
 
+# スコアホルダー設定
+    scoreboard players set $LocalItemSlotIndex Sketch 0
+    scoreboard players set $MinecartIndex Sketch 0
 
-# scoreholder設定
+# 定数設定
     scoreboard players set $65536 Sketch 65536
-
-
-# forceload設定
-    forceload add 10000 10000
-
-
-# shulkerbox設定
-    setblock 10000 -64 10000 minecraft:orange_shulker_box{Lock:"Sketch"}
-
-
-# 初期化済みとして設定
-    data modify storage sketch: Version set value "1.0.1"

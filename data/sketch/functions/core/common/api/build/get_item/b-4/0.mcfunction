@@ -1,0 +1,5 @@
+#> sketch:core/common/api/build/get_item/b-4/0
+# @within function sketch:core/common/api/build/get_item/b-3/0
+
+execute if score $TargetSlot Sketch matches 0 run item replace block 10000 0 10000 container.0 from block ~ ~ ~ container.0
+execute if score $TargetSlot Sketch matches 1 run item replace block 10000 0 10000 container.0 from block ~ ~ ~ container.1

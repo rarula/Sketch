@@ -1,4 +1,5 @@
 {
+    "replace": false,
     "values": [
         "minecraft:acacia_boat",
         "minecraft:acacia_button",
