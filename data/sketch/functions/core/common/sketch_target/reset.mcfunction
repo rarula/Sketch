@@ -1,4 +1,4 @@
-#> sketch:core/common/reset_sketch_target
+#> sketch:core/common/sketch_target/reset
 #
 # Sketch.Target タグを削除する
 #

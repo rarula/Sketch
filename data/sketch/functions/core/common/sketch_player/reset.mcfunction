@@ -1,4 +1,4 @@
-#> sketch:core/common/reset_sketch_player
+#> sketch:core/common/sketch_player/reset
 #
 # Sketch.Player タグを削除する
 #

@@ -16,4 +16,4 @@
     function #sketch:handler/on_open/chest_minecart
 
 # リセット
-    function sketch:core/common/reset_sketch_target
+    function sketch:core/common/sketch_target/reset

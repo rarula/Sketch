@@ -1,4 +1,4 @@
-#> sketch:core/common/set_sketch_target
+#> sketch:core/common/sketch_target/set
 #
 # 実行者のプレイヤーが開いているチェスト付きトロッコに、 Sketch.Target タグを設定する
 #

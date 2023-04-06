@@ -8,4 +8,4 @@
     execute at @s run function #sketch:set_variable/ender_chest
 
 # リセット
-    function sketch:core/common/reset_sketch_player
+    function sketch:core/common/sketch_player/reset

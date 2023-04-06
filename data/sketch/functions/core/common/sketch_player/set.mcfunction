@@ -1,4 +1,4 @@
-#> sketch:core/common/set_sketch_player
+#> sketch:core/common/sketch_player/set
 #
 # 実行者のチェスト付きトロッコを開いているプレイヤーに、 Sketch.Player タグを設定する
 #

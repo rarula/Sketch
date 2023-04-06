@@ -2,7 +2,7 @@
 # @within function sketch:core/handler/on_select/_
 
 ## Sketch.Target を設定
-    function sketch:core/common/set_sketch_target
+    function sketch:core/common/sketch_target/set
 
 
 # メニューの情報を取得
@@ -25,4 +25,4 @@
 
 
 ## リセット
-    function sketch:core/common/reset_sketch_target
+    function sketch:core/common/sketch_target/reset
