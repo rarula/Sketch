@@ -61,7 +61,6 @@ execute if data storage sketch: callback{listener:"give"} run give @s minecraft:
 ```mcfunction
 scoreboard objectives remove SketchDrop
 scoreboard objectives remove SketchId
-scoreboard objectives remove Sketch
 
 setblock 10000 -64 10000 minecraft:air
 ```
