@@ -1,6 +1,10 @@
 #> sketch:core/handler/on_select/menu_type/chest_minecart/callback
 # @within function sketch:core/handler/on_select/menu_type/chest_minecart/_
 
+## isInCallback を設定
+    function sketch:core/common/is_in_callback/set
+
+
 # 通常アイテムを取得
     data remove storage sketch:temp CurrentContents[{tag:{Sketch:{isButton:true}}}]
 
@@ -14,6 +18,10 @@
 
 # リセット
     data remove storage sketch: callback
+
+
+## isInCallback を削除
+    function sketch:core/common/is_in_callback/reset
 
 
 # コールバック中にBuildAPIが呼ばれていない -> 現在のメニューを設定

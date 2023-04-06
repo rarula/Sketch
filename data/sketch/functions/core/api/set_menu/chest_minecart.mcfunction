@@ -1,6 +1,10 @@
 #> sketch:core/api/set_menu/chest_minecart
 # @within function sketch:core/api/set_menu/_
 
+## isInCallback を設定
+    function sketch:core/common/is_in_callback/set
+
+
 # Sketch.Target を設定
     function sketch:core/common/sketch_target/set
 
@@ -11,3 +15,7 @@
 
 # リセット
     function sketch:core/common/sketch_target/reset
+
+
+## isInCallback を削除
+    function sketch:core/common/is_in_callback/reset
