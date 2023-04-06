@@ -1,6 +1,6 @@
 #> sketch:api/register_item/button
 #
-# アイテムを登録します
+# アイテムをボタンとして登録します
 #
 # @input
 #   vector 10000 0 10000

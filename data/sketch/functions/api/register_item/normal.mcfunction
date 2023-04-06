@@ -1,6 +1,6 @@
 #> sketch:api/register_item/normal
 #
-# アイテムを登録します
+# アイテムを通常のまま登録します
 #
 # @input
 #   vector 10000 0 10000

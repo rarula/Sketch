@@ -1,6 +1,6 @@
 #> sketch:api/register_item/variable
 #
-# アイテムを登録します
+# アイテムを仮のものとして登録します
 #
 # @input
 #   storage sketch: in
