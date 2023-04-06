@@ -1,7 +1,7 @@
 <div align=center>
 
 # Sketch
-チェスト付きトロッコ・エンダーチェスト によるインベントリメニューを簡単に作成するためのフレームワーク
+インベントリメニューを簡単に構築するための mcfunction フレームワーク
 
 ![Sketch v2.0.0_ja](https://user-images.githubusercontent.com/74240663/229465231-a4b20e5b-0f1c-422d-a85e-499710039427.gif)  
 この例のデータパックは [Example](Example) ディレクトリにあります
@@ -48,7 +48,7 @@ function sketch:api/build/auto
 execute if data storage sketch: callback{listener:"give"} run give @s minecraft:gold_block 1
 ```
 
-詳しい使い方は こちら を参照してください
+詳しい使い方は[こちら](https://github.com/rarula/Sketch/wiki/Tutorial)を参照してください
 
 ## 注意
 - 座標 10000 10000 をforceloadし、以下の座標にシュルカーボックスを配置します
