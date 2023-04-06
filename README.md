@@ -56,6 +56,16 @@ execute if data storage sketch: callback{listener:"give"} run give @s minecraft:
     - 10000 1 10000
     - 10000 2 10000
 
+## 以前のバージョンの Sketch について
+以前のバージョンの Sketch を使っていた場合、以下のコマンドを実行することで、不要になったオブジェクトを削除できます。
+```mcfunction
+scoreboard objectives remove SketchDrop
+scoreboard objectives remove SketchId
+scoreboard objectives remove Sketch
+
+setblock 10000 -64 10000 minecraft:air
+```
+
 ## 連絡
 <https://twitter.com/rarula_>
 
