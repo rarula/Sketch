@@ -17,6 +17,11 @@
 # メニューを作成
     function sketch:core/common/api/build/create_menu/_
 
+
+## post
+    function sketch:core/common/api/build/post
+
+
 # OhMyDatにメニューの情報を設定
     function #oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.MenuId set from storage sketch: in.id
@@ -31,7 +36,3 @@
 
 # リセット
     data remove storage sketch: in
-
-
-## post
-    function sketch:core/common/api/build/post
