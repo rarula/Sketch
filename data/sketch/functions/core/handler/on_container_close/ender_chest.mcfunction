@@ -6,7 +6,7 @@
 
 # コールバックの戻り値を設定
     data modify storage sketch:temp CurrentContents set from entity @s EnderItems
-    data remove storage sketch:temp CurrentContents[{tag:{Sketch:{}}}]
+    data remove storage sketch:temp CurrentContents[{tag:{Sketch:{isButton:true}}}]
 
 # コールバック
     data modify storage sketch: callback.otherItems set from storage sketch:temp CurrentContents

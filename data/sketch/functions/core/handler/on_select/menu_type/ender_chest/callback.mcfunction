@@ -2,7 +2,7 @@
 # @within function sketch:core/handler/on_select/menu_type/ender_chest/_
 
 # 通常アイテムを取得
-    data remove storage sketch:temp CurrentContents[{tag:{Sketch:{}}}]
+    data remove storage sketch:temp CurrentContents[{tag:{Sketch:{isButton:true}}}]
 
 # コールバック
     data modify storage sketch: callback.id set from storage sketch:temp MenuId
