@@ -5,9 +5,6 @@
     function sketch:core/common/is_in_callback/set
 
 
-# 通常アイテムを取得
-    data remove storage sketch:temp CurrentContents[{tag:{Sketch:{isButton:true}}}]
-
 # コールバック
     data modify storage sketch: callback.id set from storage sketch:temp MenuId
     data modify storage sketch: callback.listener set from storage sketch:temp Item.tag.Sketch.listener
@@ -25,7 +22,7 @@
 
 
 # コールバック中にBuildAPIが呼ばれていない -> 現在のメニューを設定
-    execute unless data storage sketch:core {BuildApiCalled:true} run function sketch:core/handler/on_select/menu_type/chest_minecart/set_current_menu
+    execute unless data storage sketch:core {CalledBuildApi:true} run function sketch:core/handler/on_select/menu_type/chest_minecart/set_current_menu
 
 # リセット
-    data remove storage sketch:core BuildApiCalled
+    data remove storage sketch:core CalledBuildApi

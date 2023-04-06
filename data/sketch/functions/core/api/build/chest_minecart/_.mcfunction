@@ -7,12 +7,12 @@
 #
 # @within function sketch:api/build/chest_minecart
 
-## 実行者を登録
-    function sketch:api/register_chest_minecart
-
 ## pre
     function sketch:core/common/api/build/pre
 
+
+# 実行者を登録
+    function sketch:api/register_chest_minecart
 
 # メニューを作成
     function sketch:core/common/api/build/create_menu/_

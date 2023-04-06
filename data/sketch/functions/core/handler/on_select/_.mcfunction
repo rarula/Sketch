@@ -9,8 +9,8 @@
 #
 # @within function sketch:core/handler/*/_
 
-## onSelectを使用したものとして設定
-    data modify storage sketch:core OnSelectCalled set value true
+## CalledOnSelect を設定
+    data modify storage sketch:core CalledOnSelect set value true
 
 
 # 開いているチェストの種類ごとの処理
@@ -22,5 +22,5 @@
     data remove storage sketch:temp SelectionType
 
 
-## onSelectを使用しているかどうかを初期化
-    data remove storage sketch:core OnSelectCalled
+## CalledOnSelect を削除
+    data remove storage sketch:core CalledOnSelect

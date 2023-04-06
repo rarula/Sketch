@@ -9,5 +9,13 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.CurrentMenuType set value "EnderChest"
 
 
+## isInCallback を設定
+    function sketch:core/common/is_in_callback/set
+
+
 # コールバック
     function #sketch:handler/on_open/ender_chest
+
+
+## isInCallback を削除
+    function sketch:core/common/is_in_callback/reset

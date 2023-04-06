@@ -50,6 +50,7 @@
 # @within * sketch:**
     #declare storage sketch:temp
     #declare storage sketch:temp/build
+    #declare storage sketch:temp/set_menu
 
 #> utilのストレージ
 # @within * sketch:**

@@ -10,6 +10,9 @@
 # 変更されたスロットのアイテムを取得
     function sketch:core/handler/on_select/get_changed_slot
 
+# 通常アイテムを取得
+    data remove storage sketch:temp CurrentContents[{tag:{Sketch:{isButton:true}}}]
+
 # コールバック
     function sketch:core/handler/on_select/menu_type/ender_chest/callback
 

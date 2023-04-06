@@ -20,17 +20,20 @@
     execute if entity @s[type=minecraft:chest_minecart] run function sketch:core/common/api/build/create_menu/set_item/item_type/variable/chest_minecart
     execute if entity @s[type=minecraft:player] run function sketch:core/common/api/build/create_menu/set_item/item_type/variable/ender_chest
 
+# リセット
+    data remove storage sketch: callback
+
 
 # 取得したアイテムにlistenerを設定
     item modify block 10000 0 10000 container.0 sketch:set_listener
 
+# リセット
+    data remove storage sketch: in
+
+
 # 取得したアイテムを配置
     data modify storage sketch:temp TargetSlot set from storage sketch:temp Slot
     function sketch:core/common/api/build/place_item/_
-
-# リセット
-    data remove storage sketch: callback
-    data remove storage sketch: in
 
 
 ## inを設定

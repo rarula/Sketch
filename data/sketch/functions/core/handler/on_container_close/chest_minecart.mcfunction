@@ -7,9 +7,9 @@
 ## isInCallback を設定
     function sketch:core/common/is_in_callback/set
 
-
-# Sketch.Target を設定
+## Sketch.Target を設定
     function sketch:core/common/sketch_target/set
+
 
 # コールバックの戻り値を設定
     data modify storage sketch:temp CurrentContents set from entity @e[type=minecraft:chest_minecart, tag=Sketch.Target, limit=1] Items
@@ -22,8 +22,10 @@
 # リセット
     data remove storage sketch: callback
     data remove storage sketch:temp CurrentContents
-    function sketch:core/common/sketch_target/reset
 
+
+## Sketch.Target を削除
+    function sketch:core/common/sketch_target/reset
 
 ## isInCallback を削除
     function sketch:core/common/is_in_callback/reset

@@ -14,6 +14,9 @@
 # 変更されたスロットのアイテムを取得
     function sketch:core/handler/on_select/get_changed_slot
 
+# 通常アイテムを取得
+    data remove storage sketch:temp CurrentContents[{tag:{Sketch:{isButton:true}}}]
+
 # コールバック
     function sketch:core/handler/on_select/menu_type/chest_minecart/callback
 
@@ -24,5 +27,5 @@
     data remove storage sketch:temp Item
 
 
-## リセット
+## Sketch.Target を削除
     function sketch:core/common/sketch_target/reset

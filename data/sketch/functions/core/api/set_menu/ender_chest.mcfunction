@@ -10,6 +10,9 @@
     data remove storage sketch: in
     execute at @s run function #sketch:set_menu/ender_chest
 
+# リセット
+    data remove storage sketch: callback
+
 
 ## isInCallback を削除
     function sketch:core/common/is_in_callback/reset
