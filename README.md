@@ -1,3 +1,6 @@
+日本語 | [English](README_en.md)
+<br><br/>
+
 <div align=center>
 
 # Sketch
