@@ -1,30 +1,29 @@
-日本語 | [English](README_en.md)
+[日本語](README_ja.md) | English
 <br><br/>
 
 <div align=center>
 
 # Sketch
-インベントリメニューを簡単に構築するための mcfunction フレームワーク
+A mcfunction framework for easily building inventory menus
 
-![Sketch v2.0.0_ja](https://user-images.githubusercontent.com/74240663/229465231-a4b20e5b-0f1c-422d-a85e-499710039427.gif)  
-この例のデータパックは [Example](Example) ディレクトリにあります
+![Sketch v2 0 0_en](https://user-images.githubusercontent.com/74240663/230566348-ad6e083e-448d-4b90-b772-df668f542ea5.gif)  
+The datapack for this example is located in the [Example](Example) directory
 
 </div>
 
-## 対応バージョン
+## Supported Versions
 - 1.19.4
 
-## ダウンロード
-[Releases](https://github.com/rarula/Sketch/releases) を参照してください
+## Download
+See [Releases](https://github.com/rarula/Sketch/releases)
 
-## 依存ライブラリ
-このデータパックを使用するためには、以下のデータパックを導入する必要があります
-- 赤石愛 様：
-  - [Oh! My Dat! 1.19](https://github.com/Ai-Akaishi/OhMyDat) (MIT License)
-  - [Close Detector 1.19](https://github.com/Ai-Akaishi/CloseDetector) (MIT License)
-  - [Player Item Tuner 1.19](https://github.com/Ai-Akaishi/PlayerItemTuner) (MIT License)
+## Dependencies
+To use this datapack, the following datapacks must be installed
+- [Oh! My Dat! 1.19](https://github.com/Ai-Akaishi/OhMyDat) (MIT License)
+- [Close Detector 1.19](https://github.com/Ai-Akaishi/CloseDetector) (MIT License)
+- [Player Item Tuner 1.19](https://github.com/Ai-Akaishi/PlayerItemTuner) (MIT License)
 
-## 使い方
+## Usage
 ```mcfunction
 #> menu:main/
 
@@ -51,16 +50,16 @@ function sketch:api/build/auto
 execute if data storage sketch: callback{listener:"give"} run give @s minecraft:gold_block 1
 ```
 
-詳しい使い方は[こちら](https://github.com/rarula/Sketch/wiki/Tutorial)を参照してください
+For detailed instructions, see [here](https://github.com/rarula/Sketch/wiki/Tutorial-%5BEN%5D)
 
-## 注意
-- 座標 10000 10000 をforceloadし、以下の座標にシュルカーボックスを配置します
+## Cautionary Points
+- Forceload the coordinates 10000 10000 and place the shulker box at the following coordinates
     - 10000 0 10000
     - 10000 1 10000
     - 10000 2 10000
 
-## 以前のバージョンの Sketch について
-以前のバージョンの Sketch を使っていた場合、以下のコマンドを実行することで、不要になったオブジェクトを削除できます。
+## About Previous Versions
+If you have been using an previous version of Sketch, you can delete objects that are no longer needed by running the following command.
 ```mcfunction
 scoreboard objectives remove SketchDrop
 scoreboard objectives remove SketchId
@@ -68,8 +67,8 @@ scoreboard objectives remove SketchId
 setblock 10000 -64 10000 minecraft:air
 ```
 
-## 連絡
+## Contact
 <https://twitter.com/rarula_>
 
-## ライセンス
+## License
 [CC0-1.0](LICENSE)
