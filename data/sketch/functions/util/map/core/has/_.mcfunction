@@ -3,7 +3,7 @@
 # @input
 #   storage sketch:util in
 #       key: any
-#       map: compound[]
+#       map: Map
 #
 # @output
 #   storage sketch:util out

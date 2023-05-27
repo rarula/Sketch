@@ -2,7 +2,7 @@
 #
 # @input
 #   storage sketch:util in
-#       map: compound[]
+#       map: Map
 #       key: any
 #
 # @output

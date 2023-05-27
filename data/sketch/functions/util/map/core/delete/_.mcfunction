@@ -3,11 +3,11 @@
 # @input
 #   storage sketch:util in
 #       key: any
-#       map: compound[]
+#       map: Map
 #
 # @output
 #   storage sketch:util out
-#       map: compound[]
+#       map: Map
 #
 # @within function sketch:util/map/delete
 

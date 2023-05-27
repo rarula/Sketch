@@ -6,7 +6,7 @@
 #   storage sketch:util in
 #       key: any
 #           テストする要素のキー
-#       map: compound[]
+#       map: Map
 #           対象のMap
 #
 # @output

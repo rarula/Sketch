@@ -6,12 +6,12 @@
 #   storage sketch:util in
 #       key: any
 #           削除する要素のキー
-#       map: compound[]
+#       map: Map
 #           対象のMap
 #
 # @output
 #   storage sketch:util out
-#       map: compound[]
+#       map: Map
 #           要素が削除されたMap
 #
 # @within * sketch:**
