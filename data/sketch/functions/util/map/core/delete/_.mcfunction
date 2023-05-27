@@ -27,3 +27,4 @@
     data remove storage sketch:util/temp DeletedElements
     data remove storage sketch:util/temp Key
     data remove storage sketch:util/temp Result
+    data remove storage sketch:util in
