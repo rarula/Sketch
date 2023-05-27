@@ -1,7 +1,4 @@
-#> sketch:core/load_once
-#
-# 初回ロード時に実行される
-#
+#> sketch:core/migration/2.0.0/_
 # @within function sketch:core/load
 
 # バージョン設定
@@ -10,7 +7,6 @@
 
 # ストレージ設定
     data modify storage sketch:core GlobalItemInfoMap set value []
-
 
 # スコアボード設定
     scoreboard objectives add Sketch dummy
