@@ -1,13 +1,13 @@
 #> sketch:api/register_item/variable
 #
-# アイテムを仮のものとして登録します
+# Register an item as temporary
 #
 # @input
 #   storage sketch: in
 #       key: string
-#           登録するアイテムのキー
+#           Key of the item to be registered
 #       isGlobal?: boolean
-#           すべての場所から参照可能かどうか デフォルトはfalse (任意)
+#           Whether it can be referenced from all locations (Default value: false) (Optional)
 #
 # @api
 

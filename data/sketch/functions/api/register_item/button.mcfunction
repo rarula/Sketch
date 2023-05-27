@@ -1,18 +1,18 @@
 #> sketch:api/register_item/button
 #
-# アイテムをボタンとして登録します
+# Register an item as a button
 #
 # @input
 #   vector 10000 0 10000
 #       container.0
-#           登録するアイテム
+#           Item to be registered
 #   storage sketch: in
 #       key: string
-#           登録するアイテムのキー
+#           Key of the item to be registered
 #       listener?: any
-#           登録するアイテムのイベントリスナー (任意)
+#           Event listener for the item to be registered (Optional)
 #       isGlobal?: boolean
-#           すべての場所から参照可能かどうか デフォルトはfalse (任意)
+#           Whether it can be referenced from all locations (Default value: false) (Optional)
 #
 # @api
 

@@ -1,11 +1,11 @@
 #> sketch:api/set_menu
 #
-# 実行者のプレイヤーが チェスト付きトロッコ または エンダーチェスト を開いている場合、指定されたメニューで再設定します
+# If the executor player has Minecart with Chest or Ender Chest open, it will be reconfigured in the specified menu
 #
 # @input
 #   storage sketch: in
 #       id: any
-#           設定するメニューの識別子
+#           Identifier of the menu to be reconfigured
 #
 # @api
 

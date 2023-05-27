@@ -1,6 +1,6 @@
 #> sketch:api/setup
 #
-# 実行地点のディメンションで Sketch を正常に動作させるためのセットアップを行います
+# Set up Sketch to work properly in the dimension of the execution point
 #
 # @api
 

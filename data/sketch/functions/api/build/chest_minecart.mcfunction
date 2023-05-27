@@ -1,13 +1,13 @@
 #> sketch:api/build/chest_minecart
 #
-# 実行者のチェスト付きトロッコにメニューを作成します
+# Create a menu in the executor's inventory
 #
 # @input
 #   storage sketch: in
 #       id: any
-#           作成するメニューの識別子
+#           Identifier of the menu to be created
 #       contents: (string[] @ 9)[] @ 3
-#           作成するメニューの内容
+#           Menu contents to be created
 #
 # @api
 

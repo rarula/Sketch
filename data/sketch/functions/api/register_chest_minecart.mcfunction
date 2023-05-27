@@ -1,6 +1,6 @@
 #> sketch:api/register_chest_minecart
 #
-# 実行者のチェスト付きトロッコを登録します
+# Register the executor (Minecart with Chest)
 #
 # @api
 

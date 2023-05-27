@@ -1,11 +1,11 @@
 #> sketch:api/unregister_item
 #
-# すべての場所から参照可能なアイテムの登録を解除します
+# Unregister items that can be referenced from all locations
 #
 # @input
 #   storage sketch: in
 #       key: string
-#           登録を解除するアイテムのキー
+#           Key of the item to be unregistered
 #
 # @api
 

@@ -1,13 +1,13 @@
 #> sketch:api/build/auto
 #
-# 実行者のプレイヤーが開いている チェスト付きトロッコ または エンダーチェスト にメニューを作成します
+# Create a menu in the Minecart with Chest or Ender Chest opened by the executing player
 #
 # @input
 #   storage sketch: in
 #       id: any
-#           作成するメニューの識別子
+#           Identifier of the menu to be created
 #       contents: (string[] @ 9)[] @ 3
-#           作成するメニューの内容
+#           Menu contents to be created
 #
 # @api
 
