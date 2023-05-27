@@ -1,6 +1,6 @@
 #> menu_manager:handler/on_open
 #
-# チェスト付きトロッコ または エンダーチェスト を開いた時に呼び出される
+# Called when a player opens Minecart with Chest or Ender Chest
 #
 # @within tag/function sketch:handler/on_open/*
 

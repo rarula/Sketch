@@ -1,6 +1,6 @@
 #> menu:main/listener
 #
-# ボタンを選択した時に呼び出される
+# Called when a player selects a button
 #
 # @within function menu_manager:handler/on_select
 

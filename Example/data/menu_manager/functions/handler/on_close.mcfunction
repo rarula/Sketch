@@ -1,5 +1,5 @@
 #> menu_manager:handler/on_close
 #
-# チェスト付きトロッコ または エンダーチェスト を閉じた時に呼び出される
+# Called when a player closes Minecart with Chest or Ender Chest
 #
 # @within tag/function sketch:handler/on_close/*

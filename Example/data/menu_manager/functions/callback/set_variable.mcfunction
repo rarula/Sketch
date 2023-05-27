@@ -1,6 +1,6 @@
 #> menu_manager:callback/set_variable
 #
-# 仮のアイテムを配置する時に呼び出される
+# Called when placing a temporary item
 #
 # @within tag/function sketch:set_variable/*
 

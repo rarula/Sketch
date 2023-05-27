@@ -1,6 +1,6 @@
 #> menu_manager:callback/set_menu
 #
-# メニューを再設定する時に呼び出される
+# Called when the menu is reconfigured
 #
 # @within tag/function sketch:set_menu/*
 
