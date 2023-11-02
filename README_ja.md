@@ -12,6 +12,7 @@
 </div>
 
 ## 対応バージョン
+- 1.20.x
 - 1.19.4
 
 ## ダウンロード
@@ -20,9 +21,9 @@
 ## 依存ライブラリ
 このデータパックを使用するためには、以下のデータパックを導入する必要があります
 - 赤石愛 様：
-  - [Oh! My Dat! 1.19](https://github.com/Ai-Akaishi/OhMyDat) (MIT License)
-  - [Close Detector 1.19](https://github.com/Ai-Akaishi/CloseDetector) (MIT License)
-  - [Player Item Tuner 1.19](https://github.com/Ai-Akaishi/PlayerItemTuner) (MIT License)
+  - [Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat) (MIT License)
+  - [Close Detector](https://github.com/Ai-Akaishi/CloseDetector) (MIT License)
+  - [Player Item Tuner](https://github.com/Ai-Akaishi/PlayerItemTuner) (MIT License)
 
 ## 使い方
 ```mcfunction

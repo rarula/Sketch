@@ -12,6 +12,7 @@ The datapack for this example is located in the [Example](Example) directory
 </div>
 
 ## Supported Versions
+- 1.20.x
 - 1.19.4
 
 ## Download
@@ -19,9 +20,9 @@ See [Releases](https://github.com/rarula/Sketch/releases)
 
 ## Dependencies
 To use this datapack, the following datapacks must be installed
-- [Oh! My Dat! 1.19](https://github.com/Ai-Akaishi/OhMyDat) (MIT License)
-- [Close Detector 1.19](https://github.com/Ai-Akaishi/CloseDetector) (MIT License)
-- [Player Item Tuner 1.19](https://github.com/Ai-Akaishi/PlayerItemTuner) (MIT License)
+- [Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat) (MIT License)
+- [Close Detector](https://github.com/Ai-Akaishi/CloseDetector) (MIT License)
+- [Player Item Tuner](https://github.com/Ai-Akaishi/PlayerItemTuner) (MIT License)
 
 ## Usage
 ```mcfunction
