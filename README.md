@@ -12,7 +12,11 @@ The datapack for this example is located in the [Example](Example) directory
 </div>
 
 ## Supported Versions
-- 1.20.x
+- 1.20.4
+- 1.20.3
+- 1.20.2
+- 1.20.1
+- 1.20
 - 1.19.4
 
 ## Download
