@@ -125,10 +125,6 @@
 # @within * sketch:**
     #declare item_modifier sketch:set_listener
 
-#> loot_table
-# @within * sketch:**
-    #declare loot_table sketch:set_empty
-
 #> tag/item
 # @within * sketch:**
     #declare tag/item sketch:all
