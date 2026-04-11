@@ -14,7 +14,7 @@
     item modify block 10000 0 10000 container.0 sketch:register_item/button
 
 # the nether
-    execute if data storage sketch: callback{slot:11b} if dimension minecraft:the_nether run item replace block 10000 0 10000 container.0 with minecraft:red_stained_glass['"the nether"']
+    execute if data storage sketch: callback{slot:11b} if dimension minecraft:the_nether run item replace block 10000 0 10000 container.0 with minecraft:red_stained_glass[custom_name='"the nether"']
     execute if data storage sketch: callback{slot:11b} if dimension minecraft:the_nether run data modify storage sketch: in.listener set value {id:"TheNether", canTeleport:false}
 
     execute if data storage sketch: callback{slot:11b} unless dimension minecraft:the_nether run item replace block 10000 0 10000 container.0 with minecraft:lime_stained_glass[custom_name='"the nether"']
