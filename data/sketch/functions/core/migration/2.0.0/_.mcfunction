@@ -11,7 +11,7 @@
 # スコアボード設定
     scoreboard objectives add Sketch dummy
     scoreboard objectives add Sketch.Id dummy
-    scoreboard objectives add Sketch.Drop custom:minecraft.drop
+    scoreboard objectives add Sketch.Drop minecraft.custom:minecraft.drop
 
 # スコアホルダー設定
     scoreboard players set $LocalItemSlotIndex Sketch 0

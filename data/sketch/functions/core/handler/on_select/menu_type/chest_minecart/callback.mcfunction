@@ -7,7 +7,7 @@
 
 # コールバック
     data modify storage sketch: callback.id set from storage sketch:temp MenuId
-    data modify storage sketch: callback.listener set from storage sketch:temp Item.tag.Sketch.listener
+    data modify storage sketch: callback.listener set from storage sketch:temp Item.components."minecraft:custom_data".Sketch.listener
     data modify storage sketch: callback.selectedItem set from storage sketch:temp Item
     data modify storage sketch: callback.selectionType set from storage sketch:temp SelectionType
     data modify storage sketch: callback.otherItems set from storage sketch:temp CurrentContents

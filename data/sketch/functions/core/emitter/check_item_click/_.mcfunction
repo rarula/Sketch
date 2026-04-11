@@ -5,7 +5,7 @@
 # @within function sketch:core/tick
 
 # アイテムクリックを確認
-    execute store success storage sketch:temp isClicked byte 1.0 run clear @s #sketch:all{Sketch:{isButton:true}}
+    execute store success storage sketch:temp isClicked byte 1.0 run clear @s #sketch:all[custom_data={Sketch:{isButton:true}}]
 
 # アイテムクリックしている -> イベントを発火
     execute if data storage sketch:temp {isClicked:true} run function sketch:core/handler/on_item_click/_
