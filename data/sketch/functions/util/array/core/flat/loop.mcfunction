@@ -3,20 +3,20 @@
 #   sketch:util/array/core/flat/_
 #   sketch:util/array/core/flat/loop
 
-# ArrayList[-1][-1]に含まれるNBTがlistかテスト
+# Test if NBT contained in ArrayList[-1][-1] is a list
     execute store success storage sketch:util/temp isListTag byte 1.0 run data modify storage sketch:util/temp ArrayList[-1] append value []
 
-# NBTがlist -> そのlistを次から参照するように
+# NBT is list -> Reference that list from the next
     execute if data storage sketch:util/temp {isListTag:true} run data remove storage sketch:util/temp ArrayList[-1][-1]
     execute if data storage sketch:util/temp {isListTag:true} run data modify storage sketch:util/temp ArrayList append from storage sketch:util/temp ArrayList[-1][-1]
 
-# NBTがlist以外の何か -> そのNBTを結果に追加
+# NBT is something other than list -> Add that NBT to result
     execute if data storage sketch:util/temp {isListTag:false} run data modify storage sketch:util/temp Flattened append from storage sketch:util/temp ArrayList[-1][-1]
     execute if data storage sketch:util/temp {isListTag:false} run data remove storage sketch:util/temp ArrayList[-1][-1]
 
-# 参照しているlistが空 -> 参照中のlistと元のlistを削除
+# Referenced list is empty -> Delete the referenced list and original list
     execute unless data storage sketch:util/temp ArrayList[-1][0] run data remove storage sketch:util/temp ArrayList[-2][-1]
     execute unless data storage sketch:util/temp ArrayList[-1][0] run data remove storage sketch:util/temp ArrayList[-1]
 
-# すべての要素を平坦化するまで再帰
+# Recurse until all elements are flattened
     execute if data storage sketch:util/temp ArrayList[0] run function sketch:util/array/core/flat/loop

@@ -22,35 +22,35 @@
     #declare score_holder $Index
 
 
-# 引数を初期化
+# Initialize arguments
     execute unless data storage sketch:util in.end run data modify storage sketch:util in.end set value 2147483647
     execute unless data storage sketch:util in.start run data modify storage sketch:util in.start set value 0
 
-# 戻り値を初期化
+# Initialize return value
     data modify storage sketch:util out.array set value []
 
 
-# 値を取得
+# Get value
     execute store result score $End Sketch run data get storage sketch:util in.end
     execute store result score $Start Sketch run data get storage sketch:util in.start
 
-# end以降の要素を取り除く
+# Remove elements from end onward
     execute store result score $Index Sketch if data storage sketch:util in.array[]
     scoreboard players operation $Index Sketch -= $End Sketch
     execute if score $Index Sketch matches 1.. run function sketch:util/array/core/slice/remove
 
-# start以降の要素を取り出す
+# Extract elements from start onward
     execute store result score $Index Sketch if data storage sketch:util in.array[]
     scoreboard players operation $Index Sketch -= $Start Sketch
     execute if score $Index Sketch matches 1.. run function sketch:util/array/core/slice/move
 
 
-# 要素の順序を反転
+# Reverse element order
     data modify storage sketch:util in.array set from storage sketch:util/temp Sliced
     function sketch:util/array/reverse
 
 
-# リセット
+# Reset
     scoreboard players reset $End Sketch
     scoreboard players reset $Start Sketch
     scoreboard players reset $Index Sketch

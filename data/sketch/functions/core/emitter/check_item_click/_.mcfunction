@@ -1,14 +1,16 @@
 #> sketch:core/emitter/check_item_click/_
 #
-# アイテムクリックをイベントとして発火する
+# Fire item click as event
 #
 # @within function sketch:core/tick
+#
+# Note: Using @s Sketch score instead of storage (per-tick, per-player speedup)
 
-# アイテムクリックを確認
-    execute store success storage sketch:temp isClicked byte 1.0 run clear @s #sketch:all{Sketch:{isButton:true}}
+# Check item click (save result to score)
+    execute store success score @s Sketch run clear @s #sketch:all{Sketch:{isButton:true}}
 
-# アイテムクリックしている -> イベントを発火
-    execute if data storage sketch:temp {isClicked:true} run function sketch:core/handler/on_item_click/_
+# Item is being clicked -> Fire event
+    execute if score @s Sketch matches 1 run function sketch:core/handler/on_item_click/_
 
-# リセット
-    data remove storage sketch:temp isClicked
+# Reset
+    scoreboard players reset @s Sketch

@@ -1,20 +1,20 @@
 #> sketch:util/array/slice
 #
-# 指定した範囲の部分配列を取り出して返します
+# Extracts and returns a sub-array for the specified range
 #
 # @input
 #   storage sketch:util in
 #       array: any[]
-#           対象の配列
+#           Target array
 #       start?: int
-#           取り出しの開始位置 (任意)
+#           Start position of extraction (optional)
 #       end?: int
-#           取り出しの終了位置 (任意)
+#           End position of extraction (optional)
 #
 # @output
 #   storage sketch:util out
 #       array: any[]
-#           取り出された配列
+#           Extracted array
 #
 # @within * sketch:**
 

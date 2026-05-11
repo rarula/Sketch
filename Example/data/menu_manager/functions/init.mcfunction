@@ -8,6 +8,6 @@
 
 # Register an item
     item replace block 10000 0 10000 container.0 with minecraft:air
-    data modify storage sketch: in.key set value "-"
-    data modify storage sketch: in.isGlobal set value true
+    data modify storage sketch:data in.key set value "-"
+    data modify storage sketch:data in.isGlobal set value true
     function sketch:api/register_item/normal

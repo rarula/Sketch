@@ -11,13 +11,13 @@
 #
 # @within function sketch:util/map/has
 
-# 戻り値を初期化
+# Initialize return value
     data modify storage sketch:util out.contains set value false
 
-# 指定したキーに対する要素が含まれているか探索
+# Search whether element for specified key is contained
     function sketch:util/map/core/has/search
 
-# リセット
+# Reset
     data remove storage sketch:util/temp Key
     data remove storage sketch:util/temp Result
     data remove storage sketch:util in

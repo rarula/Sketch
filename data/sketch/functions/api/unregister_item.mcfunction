@@ -3,7 +3,7 @@
 # Unregister items that can be referenced from all locations
 #
 # @input
-#   storage sketch: in
+#   storage sketch:data in
 #       key: string
 #           Key of the item to be unregistered
 #

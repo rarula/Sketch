@@ -11,19 +11,19 @@
 #
 # @within function sketch:util/map/delete
 
-# 対象のMapをコピー
+# Copy target Map
     data modify storage sketch:util out.map set from storage sketch:util in.map
 
-# 指定されたキーを持つ要素をout.map[-1]に移動
+# Move element with specified key to out.map[-1]
     function sketch:util/map/core/delete/move
 
-# 要素を削除
+# Delete element
     data remove storage sketch:util out.map[-1]
 
-# 削除した要素を戻す
+# Restore deleted element
     function sketch:util/map/core/delete/revert
 
-# リセット
+# Reset
     data remove storage sketch:util/temp DeletedElements
     data remove storage sketch:util/temp Key
     data remove storage sketch:util/temp Result

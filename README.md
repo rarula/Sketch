@@ -33,26 +33,26 @@ To use this datapack, the following datapacks must be installed
 #> menu:main/
 
 item replace block 10000 0 10000 container.0 with minecraft:gray_stained_glass_pane
-data modify storage sketch: in.key set value "f"
+data modify storage sketch:data in.key set value "f"
 function sketch:api/register_item/button
 
 item replace block 10000 0 10000 container.0 with minecraft:gold_block
-data modify storage sketch: in.key set value "G"
-data modify storage sketch: in.listener set value "give"
+data modify storage sketch:data in.key set value "G"
+data modify storage sketch:data in.listener set value "give"
 function sketch:api/register_item/button
 
 
-data modify storage sketch: in.contents append value [f, f, f, f, f, f, f, f, f]
-data modify storage sketch: in.contents append value [f, -, -, -, G, -, -, -, f]
-data modify storage sketch: in.contents append value [f, f, f, f, f, f, f, f, f]
+data modify storage sketch:data in.contents append value [f, f, f, f, f, f, f, f, f]
+data modify storage sketch:data in.contents append value [f, -, -, -, G, -, -, -, f]
+data modify storage sketch:data in.contents append value [f, f, f, f, f, f, f, f, f]
 
-data modify storage sketch: in.id set value "main"
+data modify storage sketch:data in.id set value "main"
 function sketch:api/build/auto
 ```
 ```mcfunction
 #> menu:main/listener
 
-execute if data storage sketch: callback{listener:"give"} run give @s minecraft:gold_block 1
+execute if data storage sketch:data callback{listener:"give"} run give @s minecraft:gold_block 1
 ```
 
 For detailed instructions, see [here](https://github.com/rarula/Sketch/wiki/Tutorial-%5BEN%5D)

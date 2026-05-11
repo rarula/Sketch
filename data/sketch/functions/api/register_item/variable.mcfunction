@@ -3,7 +3,7 @@
 # Register an item as temporary
 #
 # @input
-#   storage sketch: in
+#   storage sketch:data in
 #       key: string
 #           Key of the item to be registered
 #       isGlobal?: boolean

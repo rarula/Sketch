@@ -1,7 +1,7 @@
 #> sketch:core/api/build/chest_minecart/_
 #
 # @input
-#   storage sketch: in
+#   storage sketch:data in
 #       id: any
 #       contents: (string[] @ 9)[] @ 3
 #
@@ -11,10 +11,10 @@
     function sketch:core/common/api/build/pre
 
 
-# 実行者を登録
+# Register executor
     function sketch:api/register_chest_minecart
 
-# メニューを作成
+# Create menu
     function sketch:core/common/api/build/create_menu/_
 
 
@@ -22,17 +22,17 @@
     function sketch:core/common/api/build/post
 
 
-# OhMyDatにメニューの情報を設定
+# Set menu info in OhMyDat
     function #oh_my_dat:please
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.MenuId set from storage sketch: in.id
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.MenuId set from storage sketch:data in.id
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.Contents set from block 10000 2 10000 Items
 
-# メニューを設定
+# Set menu
     function sketch:core/api/build/chest_minecart/set_menu
 
 
-# セッションを閉じる
+# Close session
     function sketch:core/common/api/build/close_session
 
-# リセット
-    data remove storage sketch: in
+# Reset
+    data remove storage sketch:data in

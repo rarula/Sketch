@@ -1,22 +1,22 @@
 #> sketch:core/handler/on_select/menu_type/ender_chest/_
 # @within function sketch:core/handler/on_select/_
 
-# メニューの情報を取得
+# Get menu info
     function #oh_my_dat:please
     data modify storage sketch:temp MenuId set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.MenuId
     data modify storage sketch:temp Contents set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.Contents
     data modify storage sketch:temp CurrentContents set from entity @s EnderItems
 
-# 変更されたスロットのアイテムを取得
+# Get item in changed slot
     function sketch:core/handler/on_select/get_changed_slot
 
-# 通常アイテムを取得
+# Get normal item
     data remove storage sketch:temp CurrentContents[{tag:{Sketch:{isButton:true}}}]
 
-# コールバック
+# Callback
     function sketch:core/handler/on_select/menu_type/ender_chest/callback
 
-# リセット
+# Reset
     data remove storage sketch:temp MenuId
     data remove storage sketch:temp Contents
     data remove storage sketch:temp CurrentContents

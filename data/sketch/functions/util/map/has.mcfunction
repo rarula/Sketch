@@ -1,18 +1,18 @@
 #> sketch:util/map/has
 #
-# 指定されたキーに対する要素が含まれているかどうかを返します
+# Returns whether an element for the specified key is contained
 #
 # @input
 #   storage sketch:util in
 #       key: any
-#           テストする要素のキー
+#           Key of the element to test
 #       map: Map
-#           対象のMap
+#           Target Map
 #
 # @output
 #   storage sketch:util out
 #       contains: boolean
-#           指定されたキーに対する要素が含まれているかどうか
+#           Whether an element for the specified key is contained
 #
 # @within * sketch:**
 

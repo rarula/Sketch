@@ -1,6 +1,6 @@
 #> sketch:core/common/is_in_callback/reset
 #
-# isInCallback を削除する
+# Remove isInCallback
 #
 # @within function sketch:core/**
 

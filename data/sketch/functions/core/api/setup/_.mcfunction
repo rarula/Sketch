@@ -1,16 +1,16 @@
 #> sketch:core/api/setup/_
 # @within function sketch:api/setup
 
-# forceload設定
+# Forceload setup
     forceload add 10000 10000
 
 
-# シュルカーボックス設定
-## 入出力用
+# Shulker box setup
+## For input/output
     setblock 10000 0 10000 minecraft:orange_shulker_box{Lock:"Sketch"}
 
-## アイテム保存用
+## For item storage
     setblock 10000 1 10000 minecraft:orange_shulker_box{Lock:"Sketch"}
 
-## メニュー作成用
+## For menu creation
     setblock 10000 2 10000 minecraft:orange_shulker_box{Lock:"Sketch"}

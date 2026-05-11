@@ -1,6 +1,6 @@
 #> sketch:util/cleanup
 #
-# 戻り値が含まれるストレージを初期化します
+# Initializes the storage that contains return values
 #
 # @within * sketch:**
 

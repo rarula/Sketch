@@ -1,9 +1,9 @@
 #> sketch:core/handler/on_item_click/_
 #
-# アイテムクリック時に呼び出される
+# Called on item click
 #
 # @within function sketch:core/emitter/check_item_click/_
 
-# イベントを発火
+# Fire event
     data modify storage sketch:temp SelectionType set value "CLICK"
     function sketch:core/handler/on_select/_

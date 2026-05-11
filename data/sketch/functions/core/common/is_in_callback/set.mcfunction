@@ -1,6 +1,6 @@
 #> sketch:core/common/is_in_callback/set
 #
-# isInCallback を設定する
+# Set isInCallback
 #
 # @within function sketch:core/**
 

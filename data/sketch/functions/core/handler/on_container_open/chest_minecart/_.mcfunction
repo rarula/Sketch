@@ -1,27 +1,27 @@
 #> sketch:core/handler/on_container_open/chest_minecart/_
 #
-# チェスト付きトロッコを開いた時に呼び出される
+# Called when a chest minecart is opened
 #
 # @within function sketch:core/emitter/check_container_open/chest_minecart
 
-# OhMyDatに開いているチェストの種類を設定
+# Set opened chest type in OhMyDat
     function #oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Sketch.CurrentMenuType set value "Minecart"
 
 
-## isInCallback を設定
+## Set isInCallback
     function sketch:core/common/is_in_callback/set
 
-## 開いたチェスト付きトロッコを探索
+## Search for opened chest minecart
     function sketch:core/handler/on_container_open/chest_minecart/filter/find
 
 
-# コールバック
+# Callback
     function #sketch:handler/on_open/chest_minecart
 
 
-## Sketch.Target を削除
+## Remove Sketch.Target
     function sketch:core/common/sketch_target/reset
 
-## isInCallback を削除
+## Remove isInCallback
     function sketch:core/common/is_in_callback/reset

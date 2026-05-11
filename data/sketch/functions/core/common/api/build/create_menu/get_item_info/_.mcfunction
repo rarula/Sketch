@@ -1,30 +1,30 @@
 #> sketch:core/common/api/build/create_menu/get_item_info/_
 #
-# 指定されたキーからItemInfoを返す
+# Return ItemInfo for the specified key
 #
 # @input
 #   storage sketch:temp
 #       Key: string
-#           取得する要素のキー
+#           Key of the element to get
 #
 # @output
 #   storage sketch:temp
 #       ItemInfo: ItemInfo
-#           取得したItemInfo
+#           Retrieved ItemInfo
 #       isGlobalItemInfo: boolean
-#           GlobalItemInfoかどうか
+#           Whether it is GlobalItemInfo
 #
 # @within function sketch:core/common/api/build/create_menu/set_item/_
 
-# LocalItemInfoMapから取得
+# Get from LocalItemInfoMap
     function sketch:core/common/api/build/create_menu/get_item_info/from_local_map
 
-# GlobalItemInfoMapから取得
+# Get from GlobalItemInfoMap
     execute if data storage sketch:util out{contains:false} run function sketch:core/common/api/build/create_menu/get_item_info/from_global_map
 
 
-# utilを初期化
+# Initialize util
     function sketch:util/cleanup
 
-# リセット
+# Reset
     data remove storage sketch:temp Key

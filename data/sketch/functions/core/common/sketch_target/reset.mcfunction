@@ -1,8 +1,8 @@
 #> sketch:core/common/sketch_target/reset
 #
-# Sketch.Target タグを削除する
+# Remove Sketch.Target tag
 #
 # @within function sketch:core/**
 
-# タグを削除
+# Remove tag
     tag @e[type=minecraft:chest_minecart, tag=Sketch.Target] remove Sketch.Target

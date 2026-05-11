@@ -1,9 +1,9 @@
 #> sketch:core/handler/on_item_drop/_
 #
-# アイテムドロップ時に呼び出される
+# Called on item drop
 #
 # @within function sketch:core/emitter/check_item_drop/found_dropped_item/player
 
-# イベントを発火
+# Fire event
     data modify storage sketch:temp SelectionType set value "DROP"
     function sketch:core/handler/on_select/_

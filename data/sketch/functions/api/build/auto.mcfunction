@@ -3,7 +3,7 @@
 # Create a menu in the Minecart with Chest or Ender Chest opened by the executing player
 #
 # @input
-#   storage sketch: in
+#   storage sketch:data in
 #       id: any
 #           Identifier of the menu to be created
 #       contents: (string[] @ 9)[] @ 3

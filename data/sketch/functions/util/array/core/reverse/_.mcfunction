@@ -10,8 +10,8 @@
 #
 # @within function sketch:util/array/reverse
 
-# 要素の順序を反転
+# Reverse element order
     function sketch:util/array/core/reverse/loop
 
-# リセット
+# Reset
     data remove storage sketch:util in

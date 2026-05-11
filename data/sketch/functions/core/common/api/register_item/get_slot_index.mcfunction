@@ -1,17 +1,17 @@
 #> sketch:core/common/api/register_item/get_slot_index
 #
-# アイテムを保存するスロットを取得する
+# Get slot to save item
 #
 # @output
 #   storage sketch:temp
 #       Slot: byte
-#           取得したスロット
+#           Retrieved slot
 #
 # @within function sketch:core/api/register_item/*/register_local_item
 
-# アイテムを保存するスロットを取得
+# Get slot to save item
     execute store result storage sketch:temp Slot byte 1.0 run scoreboard players get $LocalItemSlotIndex Sketch
 
-# アイテムを保存するスロットを変更
+# Change slot to save item
     scoreboard players add $LocalItemSlotIndex Sketch 1
     execute if score $LocalItemSlotIndex Sketch matches 27 run scoreboard players set $LocalItemSlotIndex Sketch 0

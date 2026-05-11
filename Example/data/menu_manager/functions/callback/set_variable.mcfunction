@@ -4,4 +4,4 @@
 #
 # @within tag/function sketch:set_variable/*
 
-execute if data storage sketch: callback{id:"dimensions"} run function menu:dimensions/variable
+execute if data storage sketch:data callback{id:"dimensions"} run function menu:dimensions/variable

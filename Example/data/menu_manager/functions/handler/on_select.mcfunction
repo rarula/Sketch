@@ -4,5 +4,5 @@
 #
 # @within tag/function sketch:handler/on_select/*
 
-execute if data storage sketch: callback{id:"main"} run function menu:main/listener
-execute if data storage sketch: callback{id:"dimensions"} run function menu:dimensions/listener
+execute if data storage sketch:data callback{id:"main"} run function menu:main/listener
+execute if data storage sketch:data callback{id:"dimensions"} run function menu:dimensions/listener

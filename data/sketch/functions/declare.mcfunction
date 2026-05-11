@@ -7,7 +7,7 @@
 
 #>
 # @public
-    #declare storage sketch:
+    #declare storage sketch:data
 
 #>
 # @public
@@ -33,55 +33,57 @@
     #declare tag/function sketch:set_variable/ender_chest
 
 
-#> アイテム保存用のシュルカーボックス
+#> Shulker box for item storage
 # @within * sketch:**
     #alias vector LocalContainer 10000 1 10000
 
-#> メニュー作成用のシュルカーボックス
+#> Shulker box for menu creation
 # @within * sketch:**
     #alias vector MenuContainer 10000 2 10000
 
 
-#> データ保存用のストレージ
+#> Storage for data
 # @within * sketch:**
     #declare storage sketch:core
 
-#> 一時処理用のストレージ
+#> Storage for temporary processing
 # @within * sketch:**
     #declare storage sketch:temp
     #declare storage sketch:temp/build
     #declare storage sketch:temp/set_menu
 
-#> utilのストレージ
+#> Storage for util
 # @within * sketch:**
     #declare storage sketch:util
 
-#> util一時処理用のストレージ
+#> Storage for util temporary processing
 # @within * sketch:util/**
     #declare storage sketch:util/temp
 
 
-#> スコアボード
+#> Scoreboards
 # @within * sketch:**
     #declare objective Sketch
     #declare objective Sketch.Id
     #declare objective Sketch.Drop
 
-#> スコアホルダー
+#> Score holders
 # @within * sketch:**
     #declare score_holder $LocalItemSlotIndex
     #declare score_holder $MinecartIndex
 
-#> 定数
+#> Constants
 # @within * sketch:**
     #declare score_holder $65536
+    #declare score_holder $_gcs
+    #declare score_holder $_rbit
 
 
-#> 登録済みエンティティのタグ
+#> Tag for registered entities
 # @within * sketch:**
     #declare tag Sketch.Entity
 
-#> エンティティ特定用のタグ
+#> Tag for entity identification
 # @within * sketch:**
     #declare tag Sketch.Filter.0-0
     #declare tag Sketch.Filter.1-0
@@ -139,3 +141,24 @@
 # @within * sketch:**
     #declare predicate open:chest_minecart
     #declare predicate open:ender_chest
+
+
+#> v2.1.0 additions
+# @public
+    #declare function sketch:api/refresh_menu
+    #declare function sketch:api/fill_row
+    #declare function sketch:api/sound
+
+
+#> v2.2.0 additions
+# @public
+    #declare function sketch:api/fill_border
+    #declare function sketch:api/actionbar
+    #declare function sketch:api/paginate
+
+
+#> v2.3.0 additions
+# @public
+    #declare function sketch:api/title
+    #declare function sketch:api/fill_checker
+    #declare function sketch:api/page_controls

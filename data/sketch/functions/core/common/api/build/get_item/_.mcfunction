@@ -1,31 +1,21 @@
 #> sketch:core/common/api/build/get_item/_
 #
-# 指定されたアイテムを保存用シュルカーボックスから取得する
+# Retrieve specified item from the storage shulker box
 #
 # @input
 #   storage sketch:temp
 #       TargetSlot: byte
-#           取得するスロット
+#           Slot to get
 #
 # @output
 #   vector 10000 0 10000
 #       container.0
-#           取得したアイテム
+#           Retrieved item
 #
 # @within function sketch:core/**
 
-#>
-# @within function sketch:core/common/api/build/get_item/**
-    #declare score_holder $TargetSlot
+# Retrieve from storage shulker box (macro: container slot = TargetSlot)
+    function sketch:core/common/api/build/get_item/fetch with storage sketch:temp
 
-
-# 保存するスロットの値を取得
-    execute store result score $TargetSlot Sketch run data get storage sketch:temp TargetSlot
-
-# 保存用シュルカーボックスから取得
-    execute positioned 10000 1 10000 run function sketch:core/common/api/build/get_item/b-0/0
-
-
-# リセット
-    scoreboard players reset $TargetSlot Sketch
+# Reset
     data remove storage sketch:temp TargetSlot

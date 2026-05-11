@@ -1,21 +1,21 @@
 #> sketch:core/common/api/build/create_menu/set_item/_
 #
-# アイテムを配置する
+# Place item
 #
 # @input
 #   storage sketch:temp/build
 #       Slot: byte
-#           配置するアイテムのスロット
+#           Slot of the item to place
 #       Content: string
-#           配置するアイテムのキー
+#           Key of the item to place
 #
 # @within function sketch:core/common/api/build/create_menu/loop
 
-# ItemInfoを取得
+# Get ItemInfo
     data modify storage sketch:temp Key set from storage sketch:temp Content
     function sketch:core/common/api/build/create_menu/get_item_info/_
 
-# ItemTypeごとの処理
+# Processing per ItemType
     execute if data storage sketch:temp ItemInfo{ItemType:"Normal"} run function sketch:core/common/api/build/create_menu/set_item/item_type/normal/_
     execute if data storage sketch:temp ItemInfo{ItemType:"Button"} run function sketch:core/common/api/build/create_menu/set_item/item_type/button/_
     execute if data storage sketch:temp ItemInfo{ItemType:"Variable"} run function sketch:core/common/api/build/create_menu/set_item/item_type/variable/_

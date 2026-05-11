@@ -1,15 +1,15 @@
 #> sketch:core/api/build/ender_chest/set_menu
 #
-# メニューを設定する
+# Set menu
 #
 # @input
 #   vector 10000 2 10000
 #       container.0~26
-#           設定するメニュー
+#           Menu to set
 #
 # @within function sketch:core/api/build/ender_chest/_
 
-# メニューを設定
+# Set menu
     item replace entity @s enderchest.0 from block 10000 2 10000 container.0
     item replace entity @s enderchest.1 from block 10000 2 10000 container.1
     item replace entity @s enderchest.2 from block 10000 2 10000 container.2

@@ -6,7 +6,7 @@
 #   vector 10000 0 10000
 #       container.0
 #           Item to be registered
-#   storage sketch: in
+#   storage sketch:data in
 #       key: string
 #           Key of the item to be registered
 #       listener?: any

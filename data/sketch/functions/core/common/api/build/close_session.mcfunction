@@ -1,11 +1,11 @@
 #> sketch:core/common/api/build/close_session
 #
-# セッションを閉じる
+# Close session
 #
 # @within function sketch:core/api/build/*/_
 
 # MenuContainer
-## 初期化
+## Initialization
     item replace block 10000 2 10000 container.0 with minecraft:air
     item replace block 10000 2 10000 container.1 with minecraft:air
     item replace block 10000 2 10000 container.2 with minecraft:air
@@ -35,7 +35,7 @@
     item replace block 10000 2 10000 container.26 with minecraft:air
 
 # LocalContainer
-## 初期化
+## Initialization
     item replace block 10000 1 10000 container.0 with minecraft:air
     item replace block 10000 1 10000 container.1 with minecraft:air
     item replace block 10000 1 10000 container.2 with minecraft:air
@@ -64,8 +64,8 @@
     item replace block 10000 1 10000 container.25 with minecraft:air
     item replace block 10000 1 10000 container.26 with minecraft:air
 
-## SlotIndexを初期化
+## Initialize SlotIndex
     scoreboard players set $LocalItemSlotIndex Sketch 0
 
-## ItemInfoMapを削除
+## Remove ItemInfoMap
     data remove storage sketch:core LocalItemInfoMap

@@ -1,29 +1,20 @@
 #> sketch:core/common/api/build/place_item/_
 #
-# 指定されたアイテムを作成用シュルカーボックスに配置する
+# Place specified item in the creation shulker box
 #
 # @input
 #   vector 10000 0 10000
 #       container.0
-#           配置するアイテム
+#           Item to place
 #   storage sketch:temp
 #       TargetSlot: byte
-#           配置するスロット
+#           Slot to place in
 #
 # @within function sketch:core/**
 
-#>
-# @within function sketch:core/common/api/build/place_item/**
-    #declare score_holder $TargetSlot
+# Place in creation shulker box (macro: container slot = TargetSlot)
+    function sketch:core/common/api/build/place_item/put with storage sketch:temp
 
-
-# 保存するスロットの値を取得
-    execute store result score $TargetSlot Sketch run data get storage sketch:temp TargetSlot
-
-# 作成用シュルカーボックスに配置
-    execute positioned 10000 2 10000 run function sketch:core/common/api/build/place_item/b-0/0
-
-# リセット
+# Reset
     item replace block 10000 0 10000 container.0 with minecraft:air
-    scoreboard players reset $TargetSlot Sketch
     data remove storage sketch:temp TargetSlot

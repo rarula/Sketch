@@ -1,13 +1,13 @@
 #> sketch:core/common/api/build/create_menu/set_item/item_type/variable/chest_minecart
 # @within function sketch:core/common/api/build/create_menu/set_item/item_type/variable/_
 
-## Sketch.Player を設定
+## Set Sketch.Player
     function sketch:core/common/sketch_player/set
 
 
-# コールバック
+# Callback
     execute at @s run function #sketch:set_variable/chest_minecart
 
 
-## Sketch.Player を削除
+## Remove Sketch.Player
     function sketch:core/common/sketch_player/reset

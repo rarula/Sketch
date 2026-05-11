@@ -12,16 +12,16 @@
 #
 # @within function sketch:util/map/get
 
-# 戻り値を初期化
+# Initialize return value
     data modify storage sketch:util out.contains set value false
 
-# 指定したキーの要素を探索
+# Search for element with specified key
     function sketch:util/map/core/get/search
 
-# 配列に要素が残っているなら、指定したキーに対する要素が含まれている
+# If elements remain in the array, the element for the specified key is contained
     execute if data storage sketch:util in.map[-1] run data modify storage sketch:util out.contains set value true
 
-# リセット
+# Reset
     data remove storage sketch:util/temp Key
     data remove storage sketch:util/temp Result
     data remove storage sketch:util in

@@ -3,7 +3,7 @@
 # Create a menu in the executor's ender chest
 #
 # @input
-#   storage sketch: in
+#   storage sketch:data in
 #       id: any
 #           Identifier of the menu to be created
 #       contents: (string[] @ 9)[] @ 3

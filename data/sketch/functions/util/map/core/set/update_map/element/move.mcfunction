@@ -3,13 +3,13 @@
 #   sketch:util/map/core/set/update_map/_
 #   sketch:util/map/core/set/update_map/element/move
 
-# 配列末尾に含まれるキーが一致するかテスト
+# Test if the key at the end of the array matches
     data modify storage sketch:util/temp Key set from storage sketch:util/temp TargetElements[-1].key
     execute store success storage sketch:util/temp Result byte 1.0 run data modify storage sketch:util/temp Key set from storage sketch:util in.key
 
-# キーが不一致 -> 配列末尾の要素を別のデータに移動
+# Key doesn't match -> Move last array element to another data
     execute if data storage sketch:util/temp {Result:true} run data modify storage sketch:util/temp DeletedElements append from storage sketch:util/temp TargetElements[-1]
     execute if data storage sketch:util/temp {Result:true} run data remove storage sketch:util/temp TargetElements[-1]
 
-# キーが一致するか、すべての要素を探索するまで再帰
+# Recurse until key matches or all elements are searched
     execute if data storage sketch:util/temp {Result:true} if data storage sketch:util/temp TargetElements[-1] run function sketch:util/map/core/set/update_map/element/move
